@@ -1,0 +1,64 @@
+body {
+  background-color: cadetblue;
+  height: 90vh;
+  max-height: 98vh;
+}
+
+.wrapper {
+  min-width: 100%;
+  min-height: 98vh;
+  background-color: burlywood;
+}
+
+.container {
+  display: grid;
+  height: 98vh;
+  width: 100%;
+  gap: 1%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.6fr 0.2fr 3fr 0.2fr;
+  grid-template-areas:
+     "nav"
+     "notifications"
+     "display"
+     "footer";
+  background-color: darkcyan;
+}
+
+.nav {
+  grid-area: nav;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  gap: 1%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: darksalmon;
+}
+
+.notifications {
+  grid-area: notifications;
+  background-color: darksalmon;
+}
+
+.display {
+  grid-area: display;
+  background-color: darksalmon;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: darksalmon;
+}
+
+.menu-left {
+  background-color: khaki;
+}
+
+.menu-right {
+  background-color: khaki;
+}
+
+.logo {
+  background-color: khaki;
+}
