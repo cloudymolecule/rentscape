@@ -1,5 +1,4 @@
 body {
-  background-color: cadetblue;
   height: 90vh;
   max-height: 98vh;
 }
@@ -7,7 +6,6 @@ body {
 .wrapper {
   min-width: 100%;
   min-height: 98vh;
-  background-color: burlywood;
 }
 
 .container {
@@ -22,7 +20,6 @@ body {
      "notifications"
      "display"
      "footer";
-  background-color: darkcyan;
 }
 
 .nav {
@@ -33,7 +30,6 @@ body {
   gap: 1%;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  background-color: darksalmon;
 }
 
 .notifications {
@@ -52,7 +48,15 @@ body {
 }
 
 .menu-left {
-  background-color: khaki;
+  display: grid;
+}
+
+.menu-left-cont {
+  text-align: center;
+  
+  gap: 4%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 .menu-right {
@@ -60,5 +64,8 @@ body {
 }
 
 .logo {
-  background-color: khaki;
+  background-image: url("./images/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }

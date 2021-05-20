@@ -1,4 +1,5 @@
 import './App.css'
+import MenuLeft from './components/MenuLeft'
 
 function App() {
   return (
@@ -6,11 +7,9 @@ function App() {
       <div className='container'>
         <div className='nav'>
           <div className='menu-left'>
-            menu-left
+            <MenuLeft />
           </div>
-          <div className='logo'>
-            logo
-          </div>
+          <div className='logo'></div>
           <div className='menu-right'>
             menu-right
           </div>
