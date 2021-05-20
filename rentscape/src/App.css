@@ -28,13 +28,14 @@ body {
   height: 100%;
   width: 100%;
   gap: 1%;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 0.3fr;
   grid-template-rows: 1fr;
 }
 
 .notifications {
   grid-area: notifications;
-  background-color: darksalmon;
+  text-align: center;
+  /* background-color: darksalmon; */
 }
 
 .display {
@@ -59,8 +60,31 @@ body {
   grid-template-rows: 1fr 1fr 1fr;
 }
 
+.menu-right-cont {
+  display: grid;
+  gap: 4%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "menu-right-login-logout"
+    "menu-right-register"
+    "menu-right-review";
+}
+
 .menu-right {
-  background-color: khaki;
+  display: grid;
+}
+
+.menu-right-login-logout {
+  grid-area: menu-right-login-logout;
+}
+
+.menu-right-register {
+  grid-area: menu-right-register;
+}
+
+.menu-right-review {
+  grid-area: menu-right-review;
 }
 
 .logo {
