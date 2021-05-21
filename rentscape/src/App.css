@@ -39,6 +39,7 @@ body {
 
 .display {
   grid-area: display;
+  overflow: auto;
 }
 
 .properties {
@@ -47,11 +48,17 @@ body {
   gap: 3%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
+  /* height: 1000px; */         
+  
 }
 
 .property {
-  background-color: lightblue;
-
+  background-color: rgb(223, 244, 250);
+  margin: 10px;
+  border-style: solid !important;
+  border: rgb(177, 241, 252);
+  width: 200px;
+  height: 300px;
 }
 
 .footer {
@@ -102,5 +109,5 @@ body {
   background-image: url("./images/logo.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
 }

@@ -9,6 +9,16 @@ export default class Properties extends Component {
             {address: 'some address', photo: 'some photo', stars: 3},
             {address: 'some address', photo: 'some photo', stars: 1},
             {address: 'some address', photo: 'some photo', stars: 2},
+            {address: 'some address', photo: 'some photo', stars: 5},
+            {address: 'some address', photo: 'some photo', stars: 4},
+            {address: 'some address', photo: 'some photo', stars: 3},
+            {address: 'some address', photo: 'some photo', stars: 1},
+            {address: 'some address', photo: 'some photo', stars: 2},
+            {address: 'some address', photo: 'some photo', stars: 5},
+            {address: 'some address', photo: 'some photo', stars: 4},
+            {address: 'some address', photo: 'some photo', stars: 3},
+            {address: 'some address', photo: 'some photo', stars: 1},
+            {address: 'some address', photo: 'some photo', stars: 2},
             {address: 'some address', photo: 'some photo', stars: 5}
         ]
 
