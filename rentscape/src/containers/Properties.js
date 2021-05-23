@@ -2,27 +2,26 @@ import React, { Component } from 'react'
 import Property from '../components/Property'
 
 export default class Properties extends Component {
+    
+    state = {
+        properties: []
+    }
+
+    componentDidMount(){
+        const baseUrl = 'http://localhost:4000/properties'
+
+        fetch(baseUrl)
+        .then(res => res.json())
+        .then(properties => {
+            this.setState({
+                properties
+            })
+        })
+    }
+
     render() {
 
-        const seed = [
-            {address: 'some address', photo: 'some photo', stars: 4},
-            {address: 'some address', photo: 'some photo', stars: 3},
-            {address: 'some address', photo: 'some photo', stars: 1},
-            {address: 'some address', photo: 'some photo', stars: 2},
-            {address: 'some address', photo: 'some photo', stars: 5},
-            {address: 'some address', photo: 'some photo', stars: 4},
-            {address: 'some address', photo: 'some photo', stars: 3},
-            {address: 'some address', photo: 'some photo', stars: 1},
-            {address: 'some address', photo: 'some photo', stars: 2},
-            {address: 'some address', photo: 'some photo', stars: 5},
-            {address: 'some address', photo: 'some photo', stars: 4},
-            {address: 'some address', photo: 'some photo', stars: 3},
-            {address: 'some address', photo: 'some photo', stars: 1},
-            {address: 'some address', photo: 'some photo', stars: 2},
-            {address: 'some address', photo: 'some photo', stars: 5}
-        ]
-
-        let properties = seed.map(py => <Property address={py.address} photo={py.photo} stars={py.stars}/>)
+        let properties = this.state.properties.map(py => <Property address={py.address} photo={py.photo} stars={py.stars}/>)
 
         return (
             <div className='properties'>

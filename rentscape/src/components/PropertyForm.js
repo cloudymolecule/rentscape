@@ -18,7 +18,7 @@ class PropertyForm extends Component {
         cleanlinessRating:'',
         neighborsRating:'',
         priceRating:'',
-        image:''
+        image:null
     }
 
     handleChange = e => {
@@ -27,25 +27,40 @@ class PropertyForm extends Component {
         })
     }
 
+    handleImageChange = e => { 
+        // this.setState({
+        //     image: e.target.files[0]
+        // })
+        let reader = new FileReader() 
+        reader.readAsDataURL(e.target.files[0])
+
+        reader.onload = () => {      
+            this.setState({        
+             image: reader.result      
+            })  
+        }
+        
+    }
+
     handleSubmit = e => {
         e.preventDefault()
         const newProperty = {...this.state}
         this.props.addProperty(newProperty)
         this.postProperty(newProperty)
-        // this.setState({
-        //     address:'',
-        //     address2:'',
-        //     township:'',
-        //     state:'',
-        //     reviewTitle:'',
-        //     review:'',
-        //     overallRating:'',
-        //     landlordRating:'',
-        //     cleanlinessRating:'',
-        //     neighborsRating:'',
-        //     priceRating:'',
-        //     image:''
-        // })
+        this.setState({
+            address:'',
+            address2:'',
+            township:'',
+            state:'',
+            reviewTitle:'',
+            review:'',
+            overallRating:'',
+            landlordRating:'',
+            cleanlinessRating:'',
+            neighborsRating:'',
+            priceRating:'',
+            image:null
+        })
     }
 
     postProperty = property => {
@@ -58,10 +73,12 @@ class PropertyForm extends Component {
             },
             body: JSON.stringify(property)
         }
+        // console.log(configObj.body)
         fetch(baseUrl, configObj)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            // console.log('a break')
+            console.log(data.image)
         })
     }
 
@@ -169,7 +186,8 @@ class PropertyForm extends Component {
 
                 <div className='new-property-fields'>
                     <label>Select Image: </label>
-                    <input onChange={this.handleChange} type="file" id="image" name="image" accept="image/*" />
+                    {/* <input onChange={this.handleImageChange} type="file" id="image" name="image" accept="image/png, image/jpeg" /> */}
+                    <input onChange={this.handleImageChange} type="file" name='image' accept="image/png, image/jpeg" />
                 </div>
 
                 <div >
