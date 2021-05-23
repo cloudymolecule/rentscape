@@ -2,7 +2,7 @@ body {
   height: 90vh;
   max-height: 98vh;
   background-image:url("./images/rentscapeBackground.png");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: cover;
 }
 
