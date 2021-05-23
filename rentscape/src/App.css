@@ -33,9 +33,11 @@ body {
 }
 
 .home-button {
+  display: block;
+  margin-left: auto;
   text-align:center;
   width: 10vw;
-  height: 5vh;
+  height: 3vh;
 }
 
 .notifications {
@@ -56,6 +58,14 @@ body {
   gap: 8%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
+}
+
+.new-property-form {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 8%;
 }
 
 .flip-property {
@@ -119,36 +129,9 @@ body {
   grid-template-rows: 1fr;
 }
 
-/* .menu-right-cont {
-  display: grid;
-  gap: 4%;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas:
-    "menu-right-login-logout"
-    "menu-right-register"
-    "menu-right-review";
-} */
-
-/* .menu-right {
-  display: grid;
-} */
-
-/* .menu-right-login-logout {
-  grid-area: menu-right-login-logout;
-} */
-
-/* .menu-right-register {
-  grid-area: menu-right-register;
-} */
-
-/* .menu-right-review {
-  grid-area: menu-right-review;
-} */
-
 .logo {
   background-image: url("./images/logo.png");
   background-size:contain;
   background-repeat: no-repeat;
-  background-position:center;
+  background-position: left;
 }

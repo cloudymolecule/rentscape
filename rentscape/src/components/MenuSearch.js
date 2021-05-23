@@ -3,9 +3,9 @@ import StatesList from './StatesList'
 
 export default class menuLeft extends Component {
     
-    handleAddReviewClick = (e) => {
+    handleAddPropertyClick = (e) => {
         e.preventDefault();
-        window.location.href='http://localhost:3000/add-review';
+        window.location.href='http://localhost:3000/add-property';
   
     }
     
@@ -32,7 +32,7 @@ export default class menuLeft extends Component {
                     <input />
                     <button>Sort By</button>
                     <button>Search</button>
-                    <button onClick={this.handleAddReviewClick}>Add Review</button>
+                    <button onClick={this.handleAddPropertyClick}>Add Rental Property</button>
                     <button onClick={this.handleAboutClick}>About</button>
             </div>
         )
