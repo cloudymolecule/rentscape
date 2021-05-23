@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import MenuRight from '../components/MenuRight'
-import MenuLeft from '../components/MenuLeft'
+import MenuSearch from '../components/MenuSearch'
 import Properties from './Properties'
 
 export default class MainMenus extends Component {
@@ -9,8 +8,7 @@ export default class MainMenus extends Component {
             <>
                 <div className='nav'>
                     <div className='logo'></div>
-                    <MenuLeft />
-                    <MenuRight />
+                    <MenuSearch />
                 </div>
                 <div className='notifications'>NOTIFICATIONS</div>
                 <div className='display'>

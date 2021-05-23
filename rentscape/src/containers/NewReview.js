@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
-import MenuRightReviews from '../components/MenuRightHome'
 import ReviewForm from '../components/ReviewForm'
-
+import Home from '../components/Home'
 export default class MainMenus extends Component {
     render() {
         return (
             <>
                 <div className='nav'>
                     <div className='logo'></div>
-                    <div></div>
-                    <MenuRightReviews />
+                    <Home />
                 </div>
                 <div className='notifications'>NOTIFICATIONS</div>
                 <div className='display'>
