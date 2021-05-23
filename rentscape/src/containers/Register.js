@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import MenuRightReviews from '../components/MenuRightHome'
-import ReviewForm from '../components/ReviewForm'
+import RegisterForm from '../components/RegisterForm'
+import MenuRightHome from '../components/MenuRightHome'
 
 export default class MainMenus extends Component {
     render() {
@@ -9,11 +9,11 @@ export default class MainMenus extends Component {
                 <div className='nav'>
                     <div className='logo'></div>
                     <div></div>
-                    <MenuRightReviews />
+                    <MenuRightHome />
                 </div>
                 <div className='notifications'>NOTIFICATIONS</div>
                 <div className='display'>
-                    <ReviewForm />
+                    <RegisterForm />
                 </div>
                 <div className='footer'>FOOTER</div>
             </>

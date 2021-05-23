@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export default class MenuRight extends Component {
     
-    handleAddReviewClick = (e) => {
+    handleHomeClick = (e) => {
         e.preventDefault();
         window.location.href='http://localhost:3000/';
   
@@ -12,7 +12,7 @@ export default class MenuRight extends Component {
         
         return (
             <div className='menu-right-cont'>
-                <button onClick={this.handleAddReviewClick}>Home</button>
+                <button onClick={this.handleHomeClick}>Home</button>
                 <div></div>
                 <div></div>
             </div>

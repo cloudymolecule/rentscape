@@ -2,6 +2,7 @@ import { Route, Switch } from 'react-router'
 import './App.css'
 import MainMenus from './containers/Main'
 import NewReview from './containers/NewReview'
+import Register from './containers/Register'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <div className='wrapper'>
         <Route exact path="/" component={MainMenus} />
         <Route exact path="/add-property" component={NewReview} />
+        <Route exact path="/register" component={Register} />
       </div>
     </Switch>
   )
