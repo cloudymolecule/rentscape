@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
 import StatesList from './StatesList'
+import { addProperty } from '../actions/properties'
 
 
-export default class ReviewForm extends Component {
+class PropertyForm extends Component {
     
     state = {
         address:'',
@@ -28,6 +30,7 @@ export default class ReviewForm extends Component {
     handleSubmit = e => {
         e.preventDefault()
         const newProperty = {...this.state}
+        this.props.addProperty(newProperty)
         this.setState({
             address:'',
             address2:'',
@@ -42,7 +45,6 @@ export default class ReviewForm extends Component {
             priceRating:'',
             image:''
         })
-        console.log(newProperty)
     }
 
     render() {
@@ -159,3 +161,5 @@ export default class ReviewForm extends Component {
         )
     }
 }
+
+export default connect(null, {addProperty})(PropertyForm)
