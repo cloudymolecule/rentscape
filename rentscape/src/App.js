@@ -3,6 +3,7 @@ import './App.css'
 import MainMenus from './containers/Main'
 import NewReview from './containers/NewReview'
 import Register from './containers/Register'
+import Login from './containers/Login'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route exact path="/" component={MainMenus} />
         <Route exact path="/add-property" component={NewReview} />
         <Route exact path="/register" component={Register} />
+        <Route exact path="/login" component={Login} />
       </div>
     </Switch>
   )
