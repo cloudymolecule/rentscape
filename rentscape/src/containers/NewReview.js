@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import MenuRight from '../components/MenuRight'
+import MenuRightReviews from '../components/MenuRightReviews'
 import ReviewForm from '../components/ReviewForm'
 
 export default class MainMenus extends Component {
@@ -9,7 +9,7 @@ export default class MainMenus extends Component {
                 <div className='nav'>
                     <div className='logo'></div>
                     <div></div>
-                    <MenuRight />
+                    <MenuRightReviews />
                 </div>
                 <div className='notifications'>NOTIFICATIONS</div>
                 <div className='display'>
