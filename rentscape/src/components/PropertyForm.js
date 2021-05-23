@@ -31,19 +31,37 @@ class PropertyForm extends Component {
         e.preventDefault()
         const newProperty = {...this.state}
         this.props.addProperty(newProperty)
-        this.setState({
-            address:'',
-            address2:'',
-            township:'',
-            state:'',
-            reviewTitle:'',
-            review:'',
-            overallRating:'',
-            landlordRating:'',
-            cleanlinessRating:'',
-            neighborsRating:'',
-            priceRating:'',
-            image:''
+        this.postProperty(newProperty)
+        // this.setState({
+        //     address:'',
+        //     address2:'',
+        //     township:'',
+        //     state:'',
+        //     reviewTitle:'',
+        //     review:'',
+        //     overallRating:'',
+        //     landlordRating:'',
+        //     cleanlinessRating:'',
+        //     neighborsRating:'',
+        //     priceRating:'',
+        //     image:''
+        // })
+    }
+
+    postProperty = property => {
+        const baseUrl = 'http://localhost:4000/properties'
+        let configObj = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(property)
+        }
+        fetch(baseUrl, configObj)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
         })
     }
 
