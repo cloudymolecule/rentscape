@@ -61,11 +61,23 @@ body {
 }
 
 .new-property-form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 15vw;
   text-align: center;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: auto;
   grid-template-rows: auto;
-  gap: 8%;
+  gap: 7%;
+}
+
+.new-property-fields {
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
 }
 
 .flip-property {
