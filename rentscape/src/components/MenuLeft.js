@@ -2,9 +2,18 @@ import React, { Component } from 'react'
 import StatesList from './StatesList'
 
 export default class menuLeft extends Component {
+    
+    handleAddReviewClick = (e) => {
+        e.preventDefault();
+        window.location.href='http://localhost:3000/add-property';
+  
+    }
+    
     render() {
 
         const StateOptions = StatesList.map(state => <option value={state}>{state}</option>)
+
+        
 
         return (
             // <div className='menu-left-cont'>
@@ -25,7 +34,7 @@ export default class menuLeft extends Component {
                 <div></div>
                 <div>
                     <button>Sort By</button>
-                    <button>Add Review</button>
+                    <button onClick={this.handleAddReviewClick}>Add Review</button>
                 </div>
             </div>
         )

@@ -1,32 +1,16 @@
+import { Route, Switch } from 'react-router'
 import './App.css'
-import MenuLeft from './components/MenuLeft'
-import MenuRight from './components/MenuRight'
-import Properties from './containers/Properties'
+import MainMenus from './containers/Main'
+import NewReview from './containers/NewReview'
 
 function App() {
   return (
-    <div className='wrapper'>
-      <div className='container'>
-        <div className='nav'>
-          <div className='logo'></div>
-          <div className='menu-left'>
-            <MenuLeft />
-          </div>
-          <div className='menu-right'>
-            <MenuRight />
-          </div>
-        </div>
-        <div className='notifications'>
-          notifications
-        </div>
-        <div className='display'>
-          <Properties />
-        </div>
-        <div className='footer'>
-          footer
-        </div>
+    <Switch>
+      <div className='wrapper'>
+        <Route exact path="/" component={MainMenus} />
+        <Route exact path="/add-property" component={NewReview} />
       </div>
-    </div>
+    </Switch>
   )
 }
 
