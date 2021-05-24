@@ -4,6 +4,7 @@ const Property = (props) => {
     
     let handleClick = () => {
         console.log('this is house', props.id)
+        window.location.href=`http://localhost:3000/properties/${props.id}`
     }
 
     return (

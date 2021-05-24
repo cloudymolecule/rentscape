@@ -56,7 +56,8 @@ class PropertyForm extends Component {
         fetch('http://localhost:4000/properties', {method: 'POST', body: property})
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            this.props.addProperty(data)
+            // window.location.href=`http://localhost:3000/properties/${data.id}`
         })
     }
 

@@ -1,27 +1,23 @@
 import React, { Component } from 'react'
 import Property from '../components/Property'
+import { addProperty } from '../actions/properties'
+import { connect } from 'react-redux';
 
-export default class Properties extends Component {
+class Properties extends Component {
     
-    state = {
-        properties: []
-    }
-
     componentDidMount(){
         const baseUrl = 'http://localhost:4000/properties'
 
         fetch(baseUrl)
         .then(res => res.json())
         .then(properties => {
-            this.setState({
-                properties
-            })
+            properties.map(py => this.props.addProperty(py))
         })
     }
 
     render() {
 
-        let properties = this.state.properties.map(py => <Property 
+        let properties = this.props.properties.map(py => <Property 
             key={py.id}
             id={py.id}
             address={py.address}
@@ -39,3 +35,7 @@ export default class Properties extends Component {
         )
     }
 }
+
+const mapStateToProps = state => ({properties: state.properties})
+
+export default connect(mapStateToProps, { addProperty })(Properties)
