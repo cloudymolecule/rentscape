@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import StatesList from './StatesList'
+import StatesList from '../constants/StatesList'
 import { addProperty } from '../actions/properties'
 
 
@@ -63,7 +63,7 @@ class PropertyForm extends Component {
 
     render() {
 
-        const StateOptions = StatesList.map(state => <option value={state}>{state}</option>)
+        const StateOptions = StatesList.map(state => <option value={state} key={state}>{state}</option>)
         
         return (
             <form onSubmit={this.handleSubmit} className='new-property-form'>
@@ -87,7 +87,7 @@ class PropertyForm extends Component {
                 <div className='new-property-fields'>
                     <label>State: </label>
                     <select onChange={this.handleChange} name='state' value={this.state.state}>
-                            <option selected value=''>Select State</option>
+                            <option defaultValue value=''>Select State</option>
                             {StateOptions}
                     </select>
                 </div>
@@ -106,7 +106,7 @@ class PropertyForm extends Component {
                 <div className='new-property-fields'>
                     <label>Overall Rating: </label>
                     <select name='overall_rating' onChange={this.handleChange} value={this.state.overall_rating}>
-                        <option selected value=''>Choose rating</option>
+                        <option defaultValue value=''>Choose rating</option>
                         <option value='1'>1</option>
                         <option value='2'>2</option>
                         <option value='3'>3</option>
@@ -118,7 +118,7 @@ class PropertyForm extends Component {
                 <div className='new-property-fields'>
                     <label>Landlord: </label>
                     <select name='landlord_rating' onChange={this.handleChange} value={this.state.landlord_rating}>
-                        <option selected value=''>Choose rating</option>
+                        <option defaultValue value=''>Choose rating</option>
                         <option value='1'>1</option>
                         <option value='2'>2</option>
                         <option value='3'>3</option>
@@ -130,7 +130,7 @@ class PropertyForm extends Component {
                 <div className='new-property-fields'>
                     <label>Cleanliness: </label>
                     <select name='cleanliness_rating' onChange={this.handleChange} value={this.state.cleanliness_rating}>
-                        <option selected value=''>Choose rating</option>
+                        <option defaultValue value=''>Choose rating</option>
                         <option value='1'>1</option>
                         <option value='2'>2</option>
                         <option value='3'>3</option>
@@ -142,7 +142,7 @@ class PropertyForm extends Component {
                 <div className='new-property-fields'>
                     <label>Neighbors: </label>
                     <select name='neighbors_rating' onChange={this.handleChange} value={this.state.neighbors_rating}>
-                        <option selected value=''>Choose rating</option>
+                        <option defaultValue value=''>Choose rating</option>
                         <option value='1'>1</option>
                         <option value='2'>2</option>
                         <option value='3'>3</option>
@@ -154,7 +154,7 @@ class PropertyForm extends Component {
                 <div className='new-property-fields'>
                     <label>Price: </label>
                     <select name='price_rating' onChange={this.handleChange} value={this.state.price_rating}>
-                        <option selected value=''>Choose rating</option>
+                        <option defaultValue value=''>Choose rating</option>
                         <option value='1'>1</option>
                         <option value='2'>2</option>
                         <option value='3'>3</option>

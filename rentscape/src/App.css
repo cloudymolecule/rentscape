@@ -120,12 +120,35 @@ body {
 .flip-property-back {
   color: white;
   transform: rotateY(180deg);
+  background-position: center;
+  background-size:contain;
+  background-repeat: no-repeat;
 }
+
+.flip-property-back-button {
+  display: flex;
+  justify-content:center;
+  align-items: flex-end;
+  width: inherit;
+  height: inherit;
+} 
 
 .flip-property-image {
   height: 100%;
   width: 100%;
   object-fit: contain
+}
+
+.property-card-link {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
 }
 
 .footer {

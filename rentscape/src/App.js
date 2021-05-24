@@ -12,8 +12,7 @@ function App() {
           <Route exact path="/" component={Main} />
           <Route exact path="/add-property" component={NewProperty} />
           
-          {/* <Route path='/properties/:id' component={PropertyDisplay}/> */}
-          <Route path='/properties/:id' render={routerProps => <PropertyDisplay {...routerProps}/>} /> 
+          <Route exact path='/properties/:id' render={routerProps => <PropertyDisplay {...routerProps}/>} /> 
         
           <Route exact path="/about" component={About} />
       </Switch>

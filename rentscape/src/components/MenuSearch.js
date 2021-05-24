@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import StatesList from './StatesList'
+import StatesList from '../constants/StatesList'
 
 export default class menuSearch extends Component {
     
