@@ -112,12 +112,20 @@ body {
 .flip-property-front {
   background-color: rgba(255, 255, 255, 0.5);
   color: black;
+  background-size:cover;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode:saturation;
 }
 
 .flip-property-back {
-  background-color: rgb(146, 234, 254);
   color: white;
   transform: rotateY(180deg);
+}
+
+.flip-property-image {
+  height: 100%;
+  width: 100%;
+  object-fit: contain
 }
 
 .footer {

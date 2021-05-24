@@ -1,3 +1,3 @@
 class Property < ApplicationRecord
-    has_one_attached :image
+    has_one_attached :image_url
 end

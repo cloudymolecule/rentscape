@@ -4,7 +4,6 @@ class PropertiesController < ApplicationController
   # GET /properties
   def index
     @properties = Property.all
-
     render json: @properties
   end
 
@@ -45,6 +44,7 @@ class PropertiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def property_params
-      params.require(:property).permit(:address, :address_2, :township, :state, :review_title, :review, :overall_rating, :landlord_rating, :cleanliness_rating, :neighbors_rating, :price_rating, :image)
+      # params.require(:property).permit(:address, :address_2, :township, :state, :review_title, :review, :overall_rating, :landlord_rating, :cleanliness_rating, :neighbors_rating, :price_rating, :image)
+      params.permit(:address, :address_2, :township, :state, :review_title, :review, :overall_rating, :landlord_rating, :cleanliness_rating, :neighbors_rating, :price_rating, :image_url)
     end
 end

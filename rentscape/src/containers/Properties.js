@@ -21,7 +21,16 @@ export default class Properties extends Component {
 
     render() {
 
-        let properties = this.state.properties.map(py => <Property address={py.address} photo={py.photo} stars={py.stars}/>)
+        let properties = this.state.properties.map(py => <Property 
+            key={py.id}
+            id={py.id}
+            address={py.address}
+            address_2={py.address_2}
+            state={py.state}
+            township={py.township}
+            overall_rating={py.overall_rating}
+            image_url={py.image_url.url}
+        />)
 
         return (
             <div className='properties'>

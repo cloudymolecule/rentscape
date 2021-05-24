@@ -8,17 +8,17 @@ class PropertyForm extends Component {
     
     state = {
         address:'',
-        address2:'',
+        address_2:'',
         township:'',
         state:'',
-        reviewTitle:'',
+        review_title:'',
         review:'',
-        overallRating:'',
-        landlordRating:'',
-        cleanlinessRating:'',
-        neighborsRating:'',
-        priceRating:'',
-        image:null
+        overall_rating:'',
+        landlord_rating:'',
+        cleanliness_rating:'',
+        neighbors_rating:'',
+        price_rating:'',
+        image_url: null
     }
 
     handleChange = e => {
@@ -28,57 +28,35 @@ class PropertyForm extends Component {
     }
 
     handleImageChange = e => { 
-        // this.setState({
-        //     image: e.target.files[0]
-        // })
-        let reader = new FileReader() 
-        reader.readAsDataURL(e.target.files[0])
-
-        reader.onload = () => {      
-            this.setState({        
-             image: reader.result      
-            })  
-        }
-        
+        this.setState({
+            image_url: e.target.files[0]
+        })
     }
 
     handleSubmit = e => {
         e.preventDefault()
-        const newProperty = {...this.state}
-        this.props.addProperty(newProperty)
-        this.postProperty(newProperty)
-        this.setState({
-            address:'',
-            address2:'',
-            township:'',
-            state:'',
-            reviewTitle:'',
-            review:'',
-            overallRating:'',
-            landlordRating:'',
-            cleanlinessRating:'',
-            neighborsRating:'',
-            priceRating:'',
-            image:null
-        })
+        const formData = new FormData()
+        formData.append('address', this.state.address)
+        formData.append('address_2', this.state.address_2)
+        formData.append('township', this.state.township)
+        formData.append('state', this.state.state)
+        formData.append('review_title', this.state.review_title)
+        formData.append('review', this.state.review)
+        formData.append('overall_rating', this.state.overall_rating)
+        formData.append('landlord_rating', this.state.landlord_rating)
+        formData.append('cleanliness_rating', this.state.cleanliness_rating)
+        formData.append('neighbors_rating', this.state.neighbors_rating)
+        formData.append('price_rating', this.state.price_rating)
+        formData.append('image_url', this.state.image_url)
+
+        this.postProperty(formData)
     }
 
     postProperty = property => {
-        const baseUrl = 'http://localhost:4000/properties'
-        let configObj = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify(property)
-        }
-        // console.log(configObj.body)
-        fetch(baseUrl, configObj)
+        fetch('http://localhost:4000/properties', {method: 'POST', body: property})
         .then(res => res.json())
         .then(data => {
-            // console.log('a break')
-            console.log(data.image)
+            console.log(data)
         })
     }
 
@@ -97,7 +75,7 @@ class PropertyForm extends Component {
                 
                 <div className='new-property-fields'>
                     <label>Address 2: </label>
-                    <input onChange={this.handleChange} name='address2' value={this.state.address2}/>
+                    <input onChange={this.handleChange} name='address_2' value={this.state.address_2}/>
                 </div>
 
                 <div className='new-property-fields'>
@@ -108,14 +86,14 @@ class PropertyForm extends Component {
                 <div className='new-property-fields'>
                     <label>State: </label>
                     <select onChange={this.handleChange} name='state' value={this.state.state}>
-                            <option selected disabled>Select State</option>
+                            <option selected value=''>Select State</option>
                             {StateOptions}
                     </select>
                 </div>
 
                 <div className='new-property-fields'>
                     <label>Review Title: </label>
-                    <input onChange={this.handleChange} name='reviewTitle' value={this.state.reviewTitle}/>
+                    <input onChange={this.handleChange} name='review_title' value={this.state.review_title}/>
                 </div>
 
                 <div >
@@ -126,8 +104,8 @@ class PropertyForm extends Component {
 
                 <div className='new-property-fields'>
                     <label>Overall Rating: </label>
-                    <select name='overallRating' onChange={this.handleChange} value={this.state.overallRating}>
-                        <option selected disabled>Choose rating</option>
+                    <select name='overall_rating' onChange={this.handleChange} value={this.state.overall_rating}>
+                        <option selected value=''>Choose rating</option>
                         <option value='1'>1</option>
                         <option value='2'>2</option>
                         <option value='3'>3</option>
@@ -138,8 +116,8 @@ class PropertyForm extends Component {
 
                 <div className='new-property-fields'>
                     <label>Landlord: </label>
-                    <select name='landlordRating' onChange={this.handleChange} value={this.state.landlordRating}>
-                        <option selected disabled>Choose rating</option>
+                    <select name='landlord_rating' onChange={this.handleChange} value={this.state.landlord_rating}>
+                        <option selected value=''>Choose rating</option>
                         <option value='1'>1</option>
                         <option value='2'>2</option>
                         <option value='3'>3</option>
@@ -150,8 +128,8 @@ class PropertyForm extends Component {
 
                 <div className='new-property-fields'>
                     <label>Cleanliness: </label>
-                    <select name='cleanlinessRating' onChange={this.handleChange} value={this.state.cleanlinessRating}>
-                        <option selected disabled>Choose rating</option>
+                    <select name='cleanliness_rating' onChange={this.handleChange} value={this.state.cleanliness_rating}>
+                        <option selected value=''>Choose rating</option>
                         <option value='1'>1</option>
                         <option value='2'>2</option>
                         <option value='3'>3</option>
@@ -162,8 +140,8 @@ class PropertyForm extends Component {
 
                 <div className='new-property-fields'>
                     <label>Neighbors: </label>
-                    <select name='neighborsRating' onChange={this.handleChange} value={this.state.neighborsRating}>
-                        <option selected disabled>Choose rating</option>
+                    <select name='neighbors_rating' onChange={this.handleChange} value={this.state.neighbors_rating}>
+                        <option selected value=''>Choose rating</option>
                         <option value='1'>1</option>
                         <option value='2'>2</option>
                         <option value='3'>3</option>
@@ -174,8 +152,8 @@ class PropertyForm extends Component {
 
                 <div className='new-property-fields'>
                     <label>Price: </label>
-                    <select name='priceRating' onChange={this.handleChange} value={this.state.priceRating}>
-                        <option selected disabled>Choose rating</option>
+                    <select name='price_rating' onChange={this.handleChange} value={this.state.price_rating}>
+                        <option selected value=''>Choose rating</option>
                         <option value='1'>1</option>
                         <option value='2'>2</option>
                         <option value='3'>3</option>
@@ -186,8 +164,7 @@ class PropertyForm extends Component {
 
                 <div className='new-property-fields'>
                     <label>Select Image: </label>
-                    {/* <input onChange={this.handleImageChange} type="file" id="image" name="image" accept="image/png, image/jpeg" /> */}
-                    <input onChange={this.handleImageChange} type="file" name='image' accept="image/png, image/jpeg" />
+                    <input onChange={this.handleImageChange} type="file" multiple={false} accept="image/png, image/jpeg" />
                 </div>
 
                 <div >
