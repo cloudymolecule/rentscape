@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import StatesList from './StatesList'
 
-export default class menuLeft extends Component {
+export default class menuSearch extends Component {
     
     handleAddPropertyClick = (e) => {
         e.preventDefault();
@@ -17,7 +17,7 @@ export default class menuLeft extends Component {
 
     render() {
 
-        const StateOptions = StatesList.map(state => <option value={state}>{state}</option>)
+        const StateOptions = StatesList.map(state => <option value={state} key={state}>{state}</option>)
 
         
 
