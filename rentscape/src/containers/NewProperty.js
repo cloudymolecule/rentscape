@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReviewForm from '../components/PropertyForm'
 import Home from '../components/Home'
+
 export default class MainMenus extends Component {
     render() {
         return (

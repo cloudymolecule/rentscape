@@ -12,8 +12,8 @@ function App() {
       <Router>
         <Switch>
             <Route exact path="/" component={Main} />
-            <Route exact path="/add-property" component={NewProperty} />
-            <Route exact path='/properties/:id' render={routerProps => <PropertyDisplay {...routerProps}/>} /> 
+            <Route path="/add-property" component={NewProperty} />
+            <Route path='/properties/:id' component={PropertyDisplay}/> 
             <Route exact path="/about" component={About} />
         </Switch>
       </Router>
