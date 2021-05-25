@@ -6,13 +6,15 @@ import { connect } from 'react-redux';
 class Properties extends Component {
     
     componentDidMount(){
-        const baseUrl = 'http://localhost:4000/properties'
-
-        fetch(baseUrl)
-        .then(res => res.json())
-        .then(properties => {
-            properties.map(py => this.props.addProperty(py))
-        })
+        if (this.props.properties.length === 0) {
+            console.log('we are inside if')
+            const baseUrl = 'http://localhost:4000/properties'
+            fetch(baseUrl)
+            .then(res => res.json())
+            .then(properties => {
+                properties.map(py => this.props.addProperty(py))
+            })
+        }
     }
 
     render() {

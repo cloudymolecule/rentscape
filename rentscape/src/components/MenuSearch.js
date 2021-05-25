@@ -32,7 +32,8 @@ export default class menuSearch extends Component {
                     <input />
                     <button>Sort By</button>
                     <button>Search</button>
-                    <button onClick={this.handleAddPropertyClick}>Add Property</button>
+                    <Link className='property-card-link' to={'/add-property'} >Add Property</Link>
+                    {/* <button onClick={this.handleAddPropertyClick}>Add Property</button> */}
                     <button onClick={this.handleAboutClick}>About</button>
             </div>
         )

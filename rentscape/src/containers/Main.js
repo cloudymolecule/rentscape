@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import MenuSearch from '../components/MenuSearch'
 import Properties from './Properties'
 
-export default class MainMenus extends Component {
+class Main extends Component {
+    
     render() {
+        
         return (
             <>
                 <div className='nav'>
@@ -19,3 +21,5 @@ export default class MainMenus extends Component {
         )
     }
 }
+
+export default Main
