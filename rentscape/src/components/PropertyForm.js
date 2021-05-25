@@ -57,7 +57,20 @@ class PropertyForm extends Component {
         .then(res => res.json())
         .then(data => {
             this.props.addProperty(data)
-            // window.location.href=`http://localhost:3000/properties/${data.id}`
+            this.setState({
+                address:'',
+                address_2:'',
+                township:'',
+                state:'',
+                review_title:'',
+                review:'',
+                overall_rating:'',
+                landlord_rating:'',
+                cleanliness_rating:'',
+                neighbors_rating:'',
+                price_rating:'',
+                image_url: null
+            })
         })
     }
 

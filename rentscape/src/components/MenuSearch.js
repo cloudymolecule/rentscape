@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import StatesList from '../constants/StatesList'
+import { Link } from 'react-router-dom'
 
 export default class menuSearch extends Component {
     
     handleAddPropertyClick = (e) => {
         e.preventDefault();
         window.location.href='http://localhost:3000/add-property';
-  
     }
     
     handleAboutClick = (e) => {
@@ -32,7 +32,7 @@ export default class menuSearch extends Component {
                     <input />
                     <button>Sort By</button>
                     <button>Search</button>
-                    <button onClick={this.handleAddPropertyClick}>Add Rental Property</button>
+                    <button onClick={this.handleAddPropertyClick}>Add Property</button>
                     <button onClick={this.handleAboutClick}>About</button>
             </div>
         )
