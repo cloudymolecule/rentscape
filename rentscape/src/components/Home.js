@@ -5,9 +5,7 @@ const Home = () => {
     
     return (
         <div>
-            <>
-                <Link className='property-card-link' to={'/'} >Home</Link>
-            </>
+            <> <Link className='property-card-link' to={'/'} >Home</Link> </>
         </div>
     )
 }
