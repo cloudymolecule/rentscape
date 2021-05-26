@@ -1,24 +1,18 @@
-import React, { Component } from 'react'
+// import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux';
 
-class PropertyDisplay extends Component {
+const PropertyDisplay = (props) => {
 
-    render() {
-        
-        const property = this.props.properties.filter(py => py.id == this.props.match.params.id)[0]
-        
-        return (
-            <div>
-                {console.log(property)}
-            </div>
-        )
-    }
+    const property = props.properties.filter(py => py.id === parseInt(props.match.params.id))[0]
+    
+    return (
+        <div>
+            {console.log(property.address)}
+        </div>
+    )
 }
 
 const mapStateToProps = state => ({properties: state.properties})
 
 export default connect(mapStateToProps)(PropertyDisplay)
-
-
-
-
