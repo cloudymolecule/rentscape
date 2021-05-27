@@ -18,7 +18,8 @@ const PropertyShow = (props) => {
             </div>
             <img className='property-show-image' src={props.image_url} alt=''/>
             <div className='property-show-review'>
-                <h2>This is the review part</h2>
+                <h2 className='property-show-review-title'>{props.review_title}</h2>
+                <p>{props.review}</p>
             </div>
             
             
@@ -30,5 +31,3 @@ export default PropertyShow
 
 // id={property.id}
 // review={property.review}
-// review_title={property.review_title}
-// township={property.township}
