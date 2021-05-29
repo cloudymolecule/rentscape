@@ -18,7 +18,7 @@ class Main extends Component {
                 <div className='display'>
                     <Properties />
                 </div>
-                <div className='footer'>FOOTER</div>
+                <div className='footer'>Copyright © 2021 Dario Carlino</div>
             </>
         )
     }

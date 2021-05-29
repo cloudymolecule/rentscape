@@ -7,7 +7,7 @@ class Properties extends Component {
     
     componentDidMount(){
         if (this.props.properties.length === 0) {
-            console.log('we are inside if')
+            console.log('we are inside if', this.props.properties.length)
             const baseUrl = 'http://localhost:4000/properties'
             fetch(baseUrl)
             .then(res => res.json())
@@ -18,8 +18,7 @@ class Properties extends Component {
     }
 
     render() {
-
-        let properties = this.props.properties.map(py => <Property 
+        const properties = this.props.properties.map(py => <Property 
             key={py.id}
             id={py.id}
             address={py.address}
@@ -27,7 +26,7 @@ class Properties extends Component {
             state={py.state}
             township={py.township}
             overall_rating={py.overall_rating}
-            image_url={py.image_url.url}
+            image_url={py.image_url}
         />)
 
         return (

@@ -5,7 +5,7 @@ class PropertySerializer < ActiveModel::Serializer
 
   def image_url
     if object.image_url.attached?
-      { url: rails_blob_url(object.image_url) }
+      rails_blob_url(object.image_url)
     end
   end
 
