@@ -21,34 +21,32 @@ class PropertyDisplay extends Component {
     }
     
     render() {
-
-        const property = this.state.property
-
+        const {address, address_2, cleanliness_rating, id, image_url, landlord_rating, neighbors_rating, overall_rating, price_rating, review, review_title, state, township} = this.state.property
         return (
                 <>
                     <div className='nav'>
                         <div className='logo'></div>
                         <Home />
                     </div>
-                    <div className='notifications'>NOTIFICATIONS</div>
+                    <div className='notifications'>{address} - {address_2}, {township} {state}</div>
                     <div className='display'>
                         <PropertyShow 
-                            address={property.address}
-                            address_2={property.address_2}
-                            cleanliness_rating={property.cleanliness_rating}
-                            id={property.id}
-                            image_url={property.image_url}
-                            landlord_rating={property.landlord_rating}
-                            neighbors_rating={property.neighbors_rating}
-                            overall_rating={property.overall_rating}
-                            price_rating={property.price_rating}
-                            review={property.review}
-                            review_title={property.review_title}
-                            state={property.state}
-                            township={property.township}
+                            address={address}
+                            address_2={address_2}
+                            cleanliness_rating={cleanliness_rating}
+                            id={id}
+                            image_url={image_url}
+                            landlord_rating={landlord_rating}
+                            neighbors_rating={neighbors_rating}
+                            overall_rating={overall_rating}
+                            price_rating={price_rating}
+                            review={review}
+                            review_title={review_title}
+                            state={state}
+                            township={township}
                         />
                     </div>
-                    <div className='footer'>FOOTER</div>
+                    <div className='footer'>Copyright © 2021 Dario Carlino</div>
                 </>
         )
     }

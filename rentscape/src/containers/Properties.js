@@ -7,7 +7,6 @@ class Properties extends Component {
     
     componentDidMount(){
         if (this.props.properties.length === 0) {
-            console.log('we are inside if', this.props.properties.length)
             const baseUrl = 'http://localhost:4000/properties'
             fetch(baseUrl)
             .then(res => res.json())
