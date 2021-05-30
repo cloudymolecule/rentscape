@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import StatesList from '../constants/StatesList'
-// import { addProperties } from '../actions/properties'
 import { postProperty } from '../actions/postProperty'
 
 
@@ -32,7 +31,6 @@ class PropertyForm extends Component {
     }
 
     handleImageChange = e => { 
-        console.log(e.target.value)
         this.setState({
             image_url: e.target.files[0]
         })
@@ -57,7 +55,8 @@ class PropertyForm extends Component {
         if (this.state.image_url !== null) {
             formData.append('image_url', this.state.image_url)
         }
-        this.props.postProperty(formData)
+        console.log(this.props.postProperty(formData))
+        
 
         // this.setState({
         //     address:'',

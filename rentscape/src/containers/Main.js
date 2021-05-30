@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import MenuSearch from '../components/MenuSearch'
 import Properties from './Properties'
 import Notifications from '../components/Notifications'
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 
 class Main extends Component {
     render() {

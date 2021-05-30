@@ -1,4 +1,4 @@
-const properties = (state = { properties: [], loading: false }, action) => {
+const properties = (state = { properties: [], errors: [], loading: false }, action) => {
     switch (action.type) {
         case 'LOADING_PROPERTIES':
             return {
@@ -13,11 +13,26 @@ const properties = (state = { properties: [], loading: false }, action) => {
                 properties: action.properties,
                 loading: false
             }
+        
+        case 'FORM_ERRORS':
+            return {
+                ...state,
+                errors: action.formErrors,
+                loading: false
+            }
+
         case 'SAVING_PROPERTY':
-            return state
+            return {
+                ...state,
+                loading: true
+            }
         
         case 'ADD_PROPERTY':
-            return state
+            return {
+                ...state,
+                errors: [],
+                loading: false
+            }
 
         default:
             return state
