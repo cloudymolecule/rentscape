@@ -1,4 +1,4 @@
-export const addProperty = property => ({
-    type: 'ADD_PROPERTY',
-    property
+export const addProperties = properties => ({
+    type: 'ADD_PROPERTIES',
+    properties
 })

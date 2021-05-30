@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import StatesList from '../constants/StatesList'
-import { addProperty } from '../actions/properties'
+import { addProperties } from '../actions/properties'
 
 
 class PropertyForm extends Component {
@@ -189,4 +189,4 @@ class PropertyForm extends Component {
     }
 }
 
-export default connect(null, {addProperty})(PropertyForm)
+export default connect(null, { addProperties })(PropertyForm)

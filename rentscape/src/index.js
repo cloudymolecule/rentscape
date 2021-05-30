@@ -7,10 +7,10 @@ import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import allReducers from './reducers/index'
 
-const middlewares = [thunk]
+const middleware = [thunk]
 
 let store = createStore(allReducers, composeWithDevTools(
-  applyMiddleware(...middlewares)
+  applyMiddleware(...middleware)
 ))
 
 ReactDOM.render(
