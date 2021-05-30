@@ -13,6 +13,12 @@ const properties = (state = { properties: [], loading: false }, action) => {
                 properties: action.properties,
                 loading: false
             }
+        case 'SAVING_PROPERTY':
+            return state
+        
+        case 'ADD_PROPERTY':
+            return state
+
         default:
             return state
     }

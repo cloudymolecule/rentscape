@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import StatesList from '../constants/StatesList'
-import { addProperties } from '../actions/properties'
+// import { addProperties } from '../actions/properties'
+import { postProperty } from '../actions/postProperty'
 
 
 class PropertyForm extends Component {
@@ -18,6 +19,8 @@ class PropertyForm extends Component {
         cleanliness_rating:'',
         neighbors_rating:'',
         price_rating:'',
+        delete_keyword: '',
+        delete_keyword_confirmation: '',
         image_url: null
     }
 
@@ -47,32 +50,53 @@ class PropertyForm extends Component {
         formData.append('cleanliness_rating', this.state.cleanliness_rating)
         formData.append('neighbors_rating', this.state.neighbors_rating)
         formData.append('price_rating', this.state.price_rating)
+        formData.append('password', this.state.delete_keyword)
+        formData.append('password_confirmation', this.state.delete_keyword_confirmation)
         formData.append('image_url', this.state.image_url)
 
-        this.postProperty(formData)
-    }
+        this.props.postProperty(formData)
 
-    postProperty = property => {
-        fetch('http://localhost:4000/properties', {method: 'POST', body: property})
-        .then(res => res.json())
-        .then(data => {
-            this.props.addProperty(data)
-            this.setState({
-                address:'',
-                address_2:'',
-                township:'',
-                state:'',
-                review_title:'',
-                review:'',
-                overall_rating:'',
-                landlord_rating:'',
-                cleanliness_rating:'',
-                neighbors_rating:'',
-                price_rating:'',
-                image_url: null
-            })
+        this.setState({
+            address:'',
+            address_2:'',
+            township:'',
+            state:'',
+            review_title:'',
+            review:'',
+            overall_rating:'',
+            landlord_rating:'',
+            cleanliness_rating:'',
+            neighbors_rating:'',
+            price_rating:'',
+            delete_keyword: '',
+            delete_keyword_confirmation: '',
+            image_url: null
         })
     }
+
+    // postProperty = property => {
+    //     fetch('http://localhost:4000/properties', {method: 'POST', body: property})
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         this.props.addProperty(data)
+    //         this.setState({
+    //             address:'',
+    //             address_2:'',
+    //             township:'',
+    //             state:'',
+    //             review_title:'',
+    //             review:'',
+    //             overall_rating:'',
+    //             landlord_rating:'',
+    //             cleanliness_rating:'',
+    //             neighbors_rating:'',
+    //             price_rating:'',
+    //             delete_keyword: '',
+    //             delete_keyword_confirmation: '',
+    //             image_url: null
+    //         })
+    //     })
+    // }
 
     render() {
 
@@ -181,6 +205,16 @@ class PropertyForm extends Component {
                     <input onChange={this.handleImageChange} type="file" multiple={false} accept="image/png, image/jpeg" />
                 </div>
 
+                <div className='new-property-fields'>
+                    <label>Delete Keyword: </label>
+                    <input type='password' onChange={this.handleChange} name='delete_keyword' value={this.state.delete_keyword}/>
+                </div>
+
+                <div className='new-property-fields'>
+                    <label>Delete Keyword Confirmation: </label>
+                    <input type='password' onChange={this.handleChange} name='delete_keyword_confirmation' value={this.state.delete_keyword_confirmation}/>
+                </div>
+
                 <div >
                     <button type='submit'>Add Property</button>
                 </div>
@@ -189,4 +223,4 @@ class PropertyForm extends Component {
     }
 }
 
-export default connect(null, { addProperties })(PropertyForm)
+export default connect(null, { postProperty })(PropertyForm)

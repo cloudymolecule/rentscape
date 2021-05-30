@@ -24,6 +24,6 @@ class Main extends Component {
     }
 }
 
-const mapStateToProps = state => ({totalProperties: state.properties.length})
+const mapStateToProps = state => ({totalProperties: state.properties.properties.length})
 
 export default connect(mapStateToProps)(Main)
