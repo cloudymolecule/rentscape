@@ -5,6 +5,7 @@ import StatesList from '../constants/StatesList'
 import { postProperty } from '../actions/postProperty'
 
 
+
 class PropertyForm extends Component {
     
     state = {
@@ -31,6 +32,7 @@ class PropertyForm extends Component {
     }
 
     handleImageChange = e => { 
+        console.log(e.target.value)
         this.setState({
             image_url: e.target.files[0]
         })
@@ -52,51 +54,28 @@ class PropertyForm extends Component {
         formData.append('price_rating', this.state.price_rating)
         formData.append('password', this.state.delete_keyword)
         formData.append('password_confirmation', this.state.delete_keyword_confirmation)
-        formData.append('image_url', this.state.image_url)
-
+        if (this.state.image_url !== null) {
+            formData.append('image_url', this.state.image_url)
+        }
         this.props.postProperty(formData)
 
-        this.setState({
-            address:'',
-            address_2:'',
-            township:'',
-            state:'',
-            review_title:'',
-            review:'',
-            overall_rating:'',
-            landlord_rating:'',
-            cleanliness_rating:'',
-            neighbors_rating:'',
-            price_rating:'',
-            delete_keyword: '',
-            delete_keyword_confirmation: '',
-            image_url: null
-        })
+        // this.setState({
+        //     address:'',
+        //     address_2:'',
+        //     township:'',
+        //     state:'',
+        //     review_title:'',
+        //     review:'',
+        //     overall_rating:'',
+        //     landlord_rating:'',
+        //     cleanliness_rating:'',
+        //     neighbors_rating:'',
+        //     price_rating:'',
+        //     delete_keyword: '',
+        //     delete_keyword_confirmation: '',
+        //     image_url: null
+        // })
     }
-
-    // postProperty = property => {
-    //     fetch('http://localhost:4000/properties', {method: 'POST', body: property})
-    //     .then(res => res.json())
-    //     .then(data => {
-    //         this.props.addProperty(data)
-    //         this.setState({
-    //             address:'',
-    //             address_2:'',
-    //             township:'',
-    //             state:'',
-    //             review_title:'',
-    //             review:'',
-    //             overall_rating:'',
-    //             landlord_rating:'',
-    //             cleanliness_rating:'',
-    //             neighbors_rating:'',
-    //             price_rating:'',
-    //             delete_keyword: '',
-    //             delete_keyword_confirmation: '',
-    //             image_url: null
-    //         })
-    //     })
-    // }
 
     render() {
 
