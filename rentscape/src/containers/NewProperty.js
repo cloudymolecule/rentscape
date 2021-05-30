@@ -12,7 +12,7 @@ const NewProperty = (props) => {
             const errors = props.errors.join(' | ')
             return <p className='error-display'>{errors}</p>
         } else {
-            return <p>all good</p>
+            return <p></p>
         }
     }
     
@@ -30,9 +30,6 @@ const NewProperty = (props) => {
         </>
     )
 }
-
-// export default NewProperty
-
 
 const mapStateToProps = state => ({errors: state.properties.errors})
 

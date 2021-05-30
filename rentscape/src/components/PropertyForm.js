@@ -58,22 +58,22 @@ class PropertyForm extends Component {
         console.log(this.props.postProperty(formData))
         
 
-        // this.setState({
-        //     address:'',
-        //     address_2:'',
-        //     township:'',
-        //     state:'',
-        //     review_title:'',
-        //     review:'',
-        //     overall_rating:'',
-        //     landlord_rating:'',
-        //     cleanliness_rating:'',
-        //     neighbors_rating:'',
-        //     price_rating:'',
-        //     delete_keyword: '',
-        //     delete_keyword_confirmation: '',
-        //     image_url: null
-        // })
+        this.setState({
+            address:'',
+            address_2:'',
+            township:'',
+            state:'',
+            review_title:'',
+            review:'',
+            overall_rating:'',
+            landlord_rating:'',
+            cleanliness_rating:'',
+            neighbors_rating:'',
+            price_rating:'',
+            delete_keyword: '',
+            delete_keyword_confirmation: '',
+            image_url: null
+        })
     }
 
     render() {

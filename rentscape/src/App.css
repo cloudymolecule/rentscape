@@ -72,7 +72,7 @@ body {
 }
 
 .error-display {
-  background-color: lawngreen;
+  background-color: rgb(255, 0, 0, 0.2);
 }
 
 .new-property-fields {
