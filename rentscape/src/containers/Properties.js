@@ -6,7 +6,6 @@ import { fetchProperties } from '../actions/fetchProperties'
 class Properties extends Component {
     
     componentDidMount(){
-        console.log('we are inside componentDidMount')
         this.props.fetchProperties()
     }
 

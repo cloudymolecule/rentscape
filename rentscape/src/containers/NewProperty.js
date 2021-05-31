@@ -1,36 +1,35 @@
-import React from 'react'
+import React, { Component } from 'react'
 import ReviewForm from '../components/PropertyForm'
 import Home from '../components/Home'
 import { connect } from 'react-redux'
 import Notifications from '../components/Notifications'
+import { resetErrors } from '../actions/resetErrors'
 
-const NewProperty = (props) => {
-    
-    const errorCheck = () => {
-        if (props.errors.length > 0) {
-            const errors = props.errors.join(' | ')
-            return <p className='error-display'>{errors}</p>
-        } else {
-            return <p></p>
-        }
+class NewProperty extends Component {
+
+    componentWillUnmount(){
+        this.props.resetErrors()
     }
-    
-    return (
-        <>
-            <div className='nav'>
-                <div className='logo'></div>
-                <Home />
-            </div>
-            {/* <div className='notifications'>{errorCheck()}</div> */}
-            <Notifications />
-            <div className='display'>
-                <ReviewForm />
-            </div>
-            <div className='footer'>FOOTER</div>
-        </>
-    )
+
+    render() {
+        return (
+            <>
+                <div className='nav'>
+                    <div className='logo'></div>
+                    <Home />
+                </div>
+                <div className='notifications'>
+                    <Notifications className='notifications' errors={this.props.errors}/>    
+                </div>
+                <div className='display'>
+                    <ReviewForm />
+                </div>
+                <div className='footer'>FOOTER</div>
+            </>
+        )
+    }
 }
 
 const mapStateToProps = state => ({errors: state.properties.errors})
 
-export default connect(mapStateToProps)(NewProperty)
+export default connect(mapStateToProps, { resetErrors })(NewProperty)

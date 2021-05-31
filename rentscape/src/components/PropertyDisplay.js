@@ -1,8 +1,11 @@
 // import React from 'react'
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import Home from './Home'
 import PropertyShow from './PropertyShow'
 import Notifications from './Notifications'
+import { resetErrors } from '../actions/resetErrors'
+
 
 class PropertyDisplay extends Component {
     
@@ -20,6 +23,10 @@ class PropertyDisplay extends Component {
                 })
             })
     }
+
+    componentWillUnmount(){
+        this.props.resetErrors()
+    }
     
     render() {
         const {address, address_2, cleanliness_rating, id, image_url, landlord_rating, neighbors_rating, overall_rating, price_rating, review, review_title, state, township} = this.state.property
@@ -29,8 +36,9 @@ class PropertyDisplay extends Component {
                         <div className='logo'></div>
                         <Home />
                     </div>
-                    {/* <div className='notifications'>{address} - {address_2}, {township} {state}</div> */}
-                    <Notifications />
+                    <div className='notifications'>
+                        <Notifications errors={this.props.errors} address={`${address} - ${address_2}, ${township} ${state}`}/>
+                    </div>
                     <div className='display'>
                         <PropertyShow 
                             address={address}
@@ -54,4 +62,6 @@ class PropertyDisplay extends Component {
     }
 }
 
-export default PropertyDisplay
+const mapStateToProps = state => ({errors: state.properties.errors})
+
+export default connect(mapStateToProps, { resetErrors })(PropertyDisplay)

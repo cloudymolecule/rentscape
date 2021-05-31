@@ -21,6 +21,13 @@ const properties = (state = { properties: [], errors: [], loading: false }, acti
                 loading: false
             }
 
+        case 'RESET_ERRORS':
+            return {
+                ...state,
+                errors: [],
+                loading: false
+            }
+
         case 'SAVING_PROPERTY':
             return {
                 ...state,

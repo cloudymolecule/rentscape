@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import StatesList from '../constants/StatesList'
 import { postProperty } from '../actions/postProperty'
+import { resetErrors } from '../actions/resetErrors'
 
 
 
@@ -74,6 +75,7 @@ class PropertyForm extends Component {
             delete_keyword_confirmation: '',
             image_url: null
         })
+        this.props.resetErrors()
     }
 
     render() {
@@ -201,4 +203,4 @@ class PropertyForm extends Component {
     }
 }
 
-export default connect(null, { postProperty })(PropertyForm)
+export default connect(null, { postProperty, resetErrors })(PropertyForm)
