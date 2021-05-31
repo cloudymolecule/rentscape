@@ -5,11 +5,8 @@ export const postProperty = property => {
         .then(res => res.json())
         .then(data => {
             if (data.errors) {
-                console.log('we just had form errors')
                 dispatch({ type: 'FORM_ERRORS', formErrors: data.errors})
-                
             } else {
-                console.log('we just added a property')
                 dispatch({ type: 'ADD_PROPERTY', property})
             }
            

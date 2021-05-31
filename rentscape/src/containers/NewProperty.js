@@ -2,11 +2,10 @@ import React from 'react'
 import ReviewForm from '../components/PropertyForm'
 import Home from '../components/Home'
 import { connect } from 'react-redux'
+import Notifications from '../components/Notifications'
 
 const NewProperty = (props) => {
     
-    console.log(props.errors)
-
     const errorCheck = () => {
         if (props.errors.length > 0) {
             const errors = props.errors.join(' | ')
@@ -22,7 +21,8 @@ const NewProperty = (props) => {
                 <div className='logo'></div>
                 <Home />
             </div>
-            <div className='notifications'>{errorCheck()}</div>
+            {/* <div className='notifications'>{errorCheck()}</div> */}
+            <Notifications />
             <div className='display'>
                 <ReviewForm />
             </div>

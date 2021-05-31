@@ -34,6 +34,15 @@ const properties = (state = { properties: [], errors: [], loading: false }, acti
                 loading: false
             }
 
+        case 'DELETING_PROPERTY':
+            return {
+                ...state,
+                loading: true
+            }
+        
+        case 'DELETE_PROPERTY':
+            return state
+
         default:
             return state
     }

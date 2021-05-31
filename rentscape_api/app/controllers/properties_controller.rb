@@ -1,5 +1,5 @@
 class PropertiesController < ApplicationController
-  before_action :set_property, only: [:show, :update, :destroy]
+  before_action :set_property, only: [:show, :update, :destroy, :validate_destroy]
 
   def index
     @properties = Property.all
@@ -20,8 +20,20 @@ class PropertiesController < ApplicationController
     end
   end
 
+  def validate_destroy
+    if @property.authenticate(params[:password])
+      @property.destroy
+      render json: {success: ['Property successfully deleted.']}
+    else
+      # render json: {errors: @property.errors.full_messages}
+      render json: {errors: ['Incorrect keyword, please try again.']}
+    end
+  end
+
   def destroy
-    @property.destroy
+    byebug
+    
+    # @property.destroy
   end
 
   private
@@ -30,6 +42,6 @@ class PropertiesController < ApplicationController
     end
 
     def property_params
-      params.permit(:address, :address_2, :township, :state, :review_title, :review, :overall_rating, :landlord_rating, :cleanliness_rating, :neighbors_rating, :price_rating, :image_url, :password, :password_confirmation)
+      params.permit(:id, :address, :address_2, :township, :state, :review_title, :review, :overall_rating, :landlord_rating, :cleanliness_rating, :neighbors_rating, :price_rating, :image_url, :password, :password_confirmation)
     end
 end

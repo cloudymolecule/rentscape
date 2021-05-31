@@ -55,8 +55,8 @@ class PropertyForm extends Component {
         if (this.state.image_url !== null) {
             formData.append('image_url', this.state.image_url)
         }
-        console.log(this.props.postProperty(formData))
-        
+
+        this.props.postProperty(formData)
 
         this.setState({
             address:'',

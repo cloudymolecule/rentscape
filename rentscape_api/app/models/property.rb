@@ -6,7 +6,7 @@ class Property < ApplicationRecord
 
     validates :password, confirmation: true, length: {within: 6..20}, on: :create
 
-    validates :address, :address_2, :township, :state, :review_title, :review, :overall_rating, :landlord_rating, :cleanliness_rating, :neighbors_rating, :price_rating, presence: true
+    validates :address, :township, :state, :review_title, :review, :overall_rating, :landlord_rating, :cleanliness_rating, :neighbors_rating, :price_rating, presence: true
 end
 
 private 

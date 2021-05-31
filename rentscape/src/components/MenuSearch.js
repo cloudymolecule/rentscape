@@ -1,6 +1,7 @@
 // import React, { Component } from 'react'
 import React from 'react'
 import StatesList from '../constants/StatesList'
+import SortBy from './SortBy'
 import { Link } from 'react-router-dom'
 
 const MenuSearch = () => {
@@ -16,7 +17,7 @@ const MenuSearch = () => {
             </select>
             <label>Township: </label>
             <input />
-            <button>Sort By</button>
+            <SortBy />
             <button>Search</button>
             <Link className='property-card-link' to={'/add-property'} >Add Property</Link>
             <Link className='property-card-link' to={'/about'} >About</Link>

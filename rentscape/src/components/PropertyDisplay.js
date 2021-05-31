@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import Home from './Home'
 import PropertyShow from './PropertyShow'
+import Notifications from './Notifications'
 
 class PropertyDisplay extends Component {
     
@@ -28,7 +29,8 @@ class PropertyDisplay extends Component {
                         <div className='logo'></div>
                         <Home />
                     </div>
-                    <div className='notifications'>{address} - {address_2}, {township} {state}</div>
+                    {/* <div className='notifications'>{address} - {address_2}, {township} {state}</div> */}
+                    <Notifications />
                     <div className='display'>
                         <PropertyShow 
                             address={address}

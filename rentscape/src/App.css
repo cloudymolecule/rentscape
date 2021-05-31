@@ -163,11 +163,12 @@ body {
   text-align: center;
   gap: 3%;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr auto 0.2fr;
   grid-template-areas:
      "property-show-info property-show-image"
      "property-show-info property-show-image"
-     "property-show-review property-show-review";
+     "property-show-review-container property-show-review-container"
+     ". property-show-delete-form"
 }
 
 .property-show-info {
@@ -192,13 +193,27 @@ ul {
   width: auto;
 }
 
+.property-show-review-container {
+  grid-area: property-show-review-container;
+}
+
 .property-show-review {
-  grid-area: property-show-review;
-  background-color: rgb(245, 245, 220, 0.3);
+  background-color: lightcoral;
+  margin-right: 30vw;
+  margin-left: 30vw;
+  box-shadow: 5px 5px 12px rgb(255, 255, 255);
+  background-color: rgb(223, 244, 250, 0.5);
 }
 
 .property-show-review-title {
   background-color: rgba(211, 179, 140, 0.3);
+}
+
+.property-show-delete-form {
+  grid-area: property-show-delete-form;
+  text-align: right;
+  padding-bottom: 20px;
+  margin-right: 10px;
 }
 
 .footer {
