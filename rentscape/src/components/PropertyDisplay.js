@@ -5,6 +5,7 @@ import Home from './Home'
 import PropertyShow from './PropertyShow'
 import Notifications from './Notifications'
 import { resetErrors } from '../actions/resetErrors'
+import { fetchProperty } from '../actions/fetchProperty'
 
 
 class PropertyDisplay extends Component {
@@ -14,14 +15,12 @@ class PropertyDisplay extends Component {
     }
 
     componentDidMount() {
-        const baseUrl = `http://localhost:4000/properties/${this.props.match.params.id}`
-            fetch(baseUrl)
-            .then(res => res.json())
-            .then(property => {
-                this.setState({
-                    property
-                })
-            })
+        this.props.fetchProperty(this.props.match.params.id)
+        const property = this.props.properties.filter(property => property.id === parseInt(this.props.match.params.id))[0]
+        console.log(property)
+        this.setState({
+            property
+        })
     }
 
     componentWillUnmount(){
@@ -62,6 +61,9 @@ class PropertyDisplay extends Component {
     }
 }
 
-const mapStateToProps = state => ({errors: state.properties.errors})
+const mapStateToProps = state => ({
+    errors: state.properties.errors,
+    properties: state.properties.properties
+})
 
-export default connect(mapStateToProps, { resetErrors })(PropertyDisplay)
+export default connect(mapStateToProps, { resetErrors, fetchProperty })(PropertyDisplay)
