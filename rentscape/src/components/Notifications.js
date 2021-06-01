@@ -10,7 +10,7 @@ const Notifications = (props) => {
         } else if (props.totalProperties) {
             return <p>{props.totalProperties} results</p>
         } 
-        return <h1></h1>
+        return <h1> </h1>
         
     }
 

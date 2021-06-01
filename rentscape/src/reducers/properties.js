@@ -1,6 +1,13 @@
-const properties = (state = { properties: [], errors: [], loading: false }, action) => {
+const properties = (state = { properties: [], errors: [], loading: true }, action) => {
     switch (action.type) {
         case 'LOADING_PROPERTIES':
+            return {
+                ...state,
+                properties: [...state.properties],
+                loading: true
+            }
+
+        case 'LOADING_PROPERTY':
             return {
                 ...state,
                 properties: [...state.properties],
@@ -31,12 +38,14 @@ const properties = (state = { properties: [], errors: [], loading: false }, acti
         case 'SAVING_PROPERTY':
             return {
                 ...state,
+                properties: [...state.properties],
                 loading: true
             }
         
         case 'ADD_PROPERTY':
             return {
                 ...state,
+                properties: [...state.properties, action.property],
                 errors: [],
                 loading: false
             }

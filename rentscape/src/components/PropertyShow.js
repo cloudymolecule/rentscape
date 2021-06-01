@@ -49,7 +49,7 @@ class PropertyShow extends Component {
             <form onSubmit={this.handleSubmit} className='property-show-delete-form'>
                 <h3>Delete Review</h3>
                 <label>Delete Keyword: </label>
-                <input onChange={this.handleChange} value={this.state.password}/>
+                <input type='password' onChange={this.handleChange} value={this.state.password}/>
                 <button>Delete</button>
             </form>
         </div>
