@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 class SortBy extends Component {
 
@@ -9,16 +10,33 @@ class SortBy extends Component {
     }
 
     sortByClick = (e) => {
+        let properties = this.props.properties
         switch (this.state.sortOption) {
             case 1:
                 this.setState({sortOption: 2, sortBy: 'State'})
-                break
+                properties.sort((a, b) => (a.state > b.state) ? 1 : -1)
+                // list.sort((a, b) => (a.color > b.color) ? 1 : -1)
+                return properties
+                // break
             case 2:
                 this.setState({sortOption: 3, sortBy: 'Rating'})
-                break
+                properties.sort((a, b) => (a.rating > b.rating) ? 1 : -1)
+                console.log(properties)
+
+                return properties
+
+                // break
             case 3:
                 this.setState({sortOption: 1, sortBy: `Image present`})
-                break
+                
+                // properties.map()
+
+                // properties.filter(property => console.log(property.image_url) )
+
+                console.log(properties)
+                return properties
+                
+                // break
             default:
                 break
         }
@@ -33,7 +51,11 @@ class SortBy extends Component {
     }
 }
 
-export default SortBy
+const mapStateToProps = state => ({
+    properties: state.properties.properties
+})
+
+export default connect(mapStateToProps)(SortBy)
 
 // const properties = (state = { properties: [], errors: [], loading: false }, action) => {
 //     switch (action.type) {
