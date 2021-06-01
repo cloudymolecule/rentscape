@@ -18,12 +18,6 @@ class PropertyDisplay extends Component {
         if (this.props.properties.length === 0) {
             this.props.fetchProperty(this.props.match.params.id)
         } 
-        setTimeout(() => {
-            const property = this.props.properties.filter(property => property.id === parseInt(this.props.match.params.id))[0]
-            this.setState({
-                property
-            })
-        }, 60)
     }
 
     componentWillUnmount(){
@@ -34,6 +28,7 @@ class PropertyDisplay extends Component {
         if (this.props.loading) {
             return <h1>LOADING</h1>
         } else {
+            const property = this.props.properties.filter(property => property.id === parseInt(this.props.match.params.id))[0]
             return (
                 <>
                     <div className='nav'>
@@ -41,23 +36,23 @@ class PropertyDisplay extends Component {
                         <Home />
                     </div>
                     <div className='notifications'>
-                        <Notifications errors={this.props.errors} address={`${this.state.property.address} - ${this.state.property.address_2}, ${this.state.property.township} ${this.state.property.state}`}/>
+                        <Notifications errors={this.props.errors} address={`${property.address} - ${property.address_2}, ${property.township} ${property.state}`}/>
                     </div>
                     <div className='display'>
                         <PropertyShow 
-                            address={this.state.property.address}
-                            address_2={this.state.property.address_2}
-                            cleanliness_rating={this.state.property.cleanliness_rating}
-                            id={this.state.property.id}
-                            image_url={this.state.property.image_url}
-                            landlord_rating={this.state.property.landlord_rating}
-                            neighbors_rating={this.state.property.neighbors_rating}
-                            overall_rating={this.state.property.overall_rating}
-                            price_rating={this.state.property.price_rating}
-                            review={this.state.property.review}
-                            review_title={this.state.property.review_title}
-                            state={this.state.property.state}
-                            township={this.state.property.township}
+                            address={property.address}
+                            address_2={property.address_2}
+                            cleanliness_rating={property.cleanliness_rating}
+                            id={property.id}
+                            image_url={property.image_url}
+                            landlord_rating={property.landlord_rating}
+                            neighbors_rating={property.neighbors_rating}
+                            overall_rating={property.overall_rating}
+                            price_rating={property.price_rating}
+                            review={property.review}
+                            review_title={property.review_title}
+                            state={property.state}
+                            township={property.township}
                         />
                     </div>
                     <div className='footer'>Copyright © 2021 Dario Carlino</div>
