@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import StatesList from '../constants/StatesList'
 import SortBy from './SortBy'
 import { Link } from 'react-router-dom'
-
 import { connect } from 'react-redux'
 import { updateSortedProperties } from '../actions/updateSortedProperties'
 
@@ -12,7 +11,7 @@ class MenuSearch extends Component {
         state: 'All',
         township: '',
         properties: [],
-        sortedProperties: []
+        resetSort: 1
     }
 
     componentDidMount(){
@@ -33,7 +32,6 @@ class MenuSearch extends Component {
             properties = this.props.properties
         }
         
-        // let properties = this.props.properties
         if (this.state.state === 'All' && this.state.township === '' ) {
             properties = this.props.properties
         } else if (this.state.state === 'All') {
@@ -44,8 +42,9 @@ class MenuSearch extends Component {
             properties = properties.filter(property => property.state === this.state.state)
             properties = properties.filter(property => property.township === this.state.township)
         }
-        this.setState({sortedProperties: properties})
         this.props.updateSortedProperties(properties)
+        const num = this.state.resetSort === 1 ? 2 : 1
+        this.setState({resetSort: num})
     }
 
     render() {
@@ -61,7 +60,7 @@ class MenuSearch extends Component {
                 </select>
                 <label>Township: </label>
                 <input name='township' onChange={this.handleChange} value={this.state.township}/>
-                <SortBy />
+                <SortBy resetSort={this.state.resetSort}/>
                 <button onClick={this.handleSearchBttn}>Search</button>
                 <Link className='property-card-link' to={'/add-property'} >Add Property</Link>
                 <Link className='property-card-link' to={'/about'} >About</Link>
