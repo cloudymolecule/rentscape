@@ -20,7 +20,6 @@ class SortBy extends Component {
             switch (this.state.sortOption) {
                 case 1:
                     properties.sort((a, b) => (a.state > b.state) ? 1 : -1)
-                    // properties.sort((a, b) => (a.state > b.state) ? 1 : ((b.state > a.state) ? -1 : 0))
                     this.setState({sortOption: 2, sortBy: 'State', sortedProperties: properties})
                     break
                 case 2:
