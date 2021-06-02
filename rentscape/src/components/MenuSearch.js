@@ -10,12 +10,8 @@ class MenuSearch extends Component {
     state = {
         state: 'All',
         township: '',
-        properties: [],
+        properties: this.props.properties,
         resetSort: 1
-    }
-
-    componentDidMount(){
-        setTimeout(() => {this.setState({ properties: this.props.properties }) }, 200)
     }
 
     handleChange = (e) => {
@@ -25,12 +21,7 @@ class MenuSearch extends Component {
     }
 
     handleSearchBttn = () => {
-        let properties
-        if (this.props.properties.length !== this.props.sortedProperties.length) {
-            properties = this.props.sortedProperties
-        } else {
-            properties = this.props.properties
-        }
+        let properties = this.props.properties
         
         if (this.state.state === 'All' && this.state.township === '' ) {
             properties = this.props.properties

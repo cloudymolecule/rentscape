@@ -9,6 +9,8 @@ const Notifications = (props) => {
             } 
         } else if (props.totalProperties) {
             return <p>{props.totalProperties} results</p>
+        } else if (props.totalProperties === 0) {
+            return <p>0 results</p>
         } 
         return <h1> </h1>
         
