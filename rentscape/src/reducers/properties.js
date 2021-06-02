@@ -1,4 +1,4 @@
-const properties = (state = { properties: [], errors: [], loading: true }, action) => {
+const properties = (state = { properties: [], sortedProperties: [], errors: [], loading: true }, action) => {
     switch (action.type) {
         case 'LOADING_PROPERTIES':
             return {
@@ -18,6 +18,7 @@ const properties = (state = { properties: [], errors: [], loading: true }, actio
             return {
                 ...state,
                 properties: action.properties,
+                sortedProperties: action.properties,
                 loading: false
             }
         
@@ -58,6 +59,12 @@ const properties = (state = { properties: [], errors: [], loading: true }, actio
         
         case 'DELETE_PROPERTY':
             return state
+
+        case 'UPDATE_SORTED':
+            return {
+                ...state,
+                sortedProperties: action.properties
+            }
 
         default:
             return state

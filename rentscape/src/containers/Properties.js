@@ -38,7 +38,7 @@ class Properties extends Component {
 
 const mapStateToProps = state => {
     return {
-        properties: state.properties.properties,
+        properties: state.properties.sortedProperties,
         loading: state.loading
     }
 }
