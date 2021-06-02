@@ -7,16 +7,16 @@ class SortBy extends Component {
     state = {
         sortBy: 'Sort By',
         sortOption: 1,
-        sortedProperties: []
+        sortedProperties: this.props.sortedProperties
     }
 
     componentDidMount(){
-        setTimeout(() => {this.setState({ sortedProperties: this.props.properties }) }, 200)
+        setTimeout(() => {this.setState({ sortedProperties: this.props.sortedProperties }) }, 200)
     }
        
 
     sortByClick = (e) => {
-        let properties = this.props.properties
+        let properties = this.props.sortedProperties
             switch (this.state.sortOption) {
                 case 1:
                     properties.sort((a, b) => (a.state > b.state) ? 1 : -1)
@@ -48,6 +48,7 @@ class SortBy extends Component {
     }
 }
 
-const mapStateToProps = state => ({ properties: state.properties.properties })
+const mapStateToProps = state => ({ sortedProperties: state.properties.sortedProperties })
+
 
 export default connect(mapStateToProps, { updateSortedProperties })(SortBy)

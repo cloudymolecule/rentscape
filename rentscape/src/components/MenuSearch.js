@@ -9,8 +9,14 @@ import { updateSortedProperties } from '../actions/updateSortedProperties'
 class MenuSearch extends Component {
     
     state = {
-        state: '',
-        township: ''
+        state: 'All',
+        township: '',
+        properties: [],
+        sortedProperties: []
+    }
+
+    componentDidMount(){
+        setTimeout(() => {this.setState({ properties: this.props.properties }) }, 200)
     }
 
     handleChange = (e) => {
@@ -20,10 +26,17 @@ class MenuSearch extends Component {
     }
 
     handleSearchBttn = () => {
-        let properties = this.props.sortedProperties
-        if (this.state.state === '' && this.state.township === '' ) {
-            return properties
-        } else if (this.state.state === '') {
+        let properties
+        if (this.props.properties.length !== this.props.sortedProperties.length) {
+            properties = this.props.sortedProperties
+        } else {
+            properties = this.props.properties
+        }
+        
+        // let properties = this.props.properties
+        if (this.state.state === 'All' && this.state.township === '' ) {
+            properties = this.props.properties
+        } else if (this.state.state === 'All') {
             properties = properties.filter(property => property.township === this.state.township)
         } else if (this.state.township === '') {
             properties = properties.filter(property => property.state === this.state.state)
@@ -31,6 +44,7 @@ class MenuSearch extends Component {
             properties = properties.filter(property => property.state === this.state.state)
             properties = properties.filter(property => property.township === this.state.township)
         }
+        this.setState({sortedProperties: properties})
         this.props.updateSortedProperties(properties)
     }
 
@@ -56,6 +70,9 @@ class MenuSearch extends Component {
     }
 }
 
-const mapStateToProps = state => ({ sortedProperties: state.properties.sortedProperties })
+const mapStateToProps = state => ({ 
+    properties: state.properties.properties,
+    sortedProperties: state.properties.sortedProperties
+})
 
 export default connect(mapStateToProps, { updateSortedProperties })(MenuSearch) 
