@@ -1,4 +1,4 @@
-export const updateSortedProperties = properties => ({
+export const updateSortedProperties = sortedProperties => ({
     type: 'UPDATE_SORTED',
-    properties
+    sortedProperties: Array.from(sortedProperties)
 })

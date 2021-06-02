@@ -76,6 +76,8 @@ class PropertyForm extends Component {
             image_url: null
         })
         this.props.resetErrors()
+        // send to home when submitted succesfully
+        // window.location.href='/'
     }
 
     render() {

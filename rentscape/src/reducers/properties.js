@@ -63,7 +63,7 @@ const properties = (state = { properties: [], sortedProperties: [], errors: [], 
         case 'UPDATE_SORTED':
             return {
                 ...state,
-                sortedProperties: action.properties
+                sortedProperties: action.sortedProperties
             }
 
         default:
