@@ -3,6 +3,9 @@ import StatesList from '../constants/StatesList'
 import SortBy from './SortBy'
 import { Link } from 'react-router-dom'
 
+import { connect } from 'react-redux'
+import { updateSortedProperties } from '../actions/updateSortedProperties'
+
 class MenuSearch extends Component {
     
     state = {
@@ -17,7 +20,18 @@ class MenuSearch extends Component {
     }
 
     handleSearchBttn = () => {
-        console.log(this.state)
+        let properties = this.props.sortedProperties
+        if (this.state.state === '' && this.state.township === '' ) {
+            return properties
+        } else if (this.state.state === '') {
+            properties = properties.filter(property => property.township === this.state.township)
+        } else if (this.state.township === '') {
+            properties = properties.filter(property => property.state === this.state.state)
+        } else {
+            properties = properties.filter(property => property.state === this.state.state)
+            properties = properties.filter(property => property.township === this.state.township)
+        }
+        this.props.updateSortedProperties(properties)
     }
 
     render() {
@@ -42,4 +56,6 @@ class MenuSearch extends Component {
     }
 }
 
-export default MenuSearch 
+const mapStateToProps = state => ({ sortedProperties: state.properties.sortedProperties })
+
+export default connect(mapStateToProps, { updateSortedProperties })(MenuSearch) 
