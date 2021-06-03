@@ -5,9 +5,9 @@ const Property = (props) => {
     
     const commaOrNot = () => {
         if (props.address_2) {
-            return <h3>{props.address}, {props.address_2} </h3>
+            return <h3 className='card-title'>{props.address}, {props.address_2} </h3>
         } else {
-            return <h3>{props.address}</h3>
+            return <h3 className='card-title'>{props.address}</h3>
         }
     }
 
