@@ -1,4 +1,4 @@
-const properties = (state = { properties: [], sortedProperties: [], errors: [], loading: true }, action) => {
+const properties = (state = { properties: [], sortedProperties: [], errors: [], loading: false }, action) => {
     switch (action.type) {
         case 'LOADING_PROPERTIES':
             return {

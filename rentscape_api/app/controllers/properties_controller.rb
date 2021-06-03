@@ -15,7 +15,6 @@ class PropertiesController < ApplicationController
     if @property.save
       render json: @property, status: :created, location: @property
     else
-      # render json: @property.errors, status: :unprocessable_entity
       render json: {errors: @property.errors.full_messages}
     end
   end
@@ -25,15 +24,8 @@ class PropertiesController < ApplicationController
       @property.destroy
       render json: {success: ['Property successfully deleted.']}
     else
-      # render json: {errors: @property.errors.full_messages}
       render json: {errors: ['Incorrect keyword, please try again.']}
     end
-  end
-
-  def destroy
-    byebug
-    
-    # @property.destroy
   end
 
   private

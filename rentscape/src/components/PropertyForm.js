@@ -39,6 +39,7 @@ class PropertyForm extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
+        this.props.resetErrors()
         const formData = new FormData()
         formData.append('address', this.state.address)
         formData.append('address_2', this.state.address_2)
@@ -58,32 +59,17 @@ class PropertyForm extends Component {
         }
 
         this.props.postProperty(formData)
-
-        this.setState({
-            address:'',
-            address_2:'',
-            township:'',
-            state:'',
-            review_title:'',
-            review:'',
-            overall_rating:'',
-            landlord_rating:'',
-            cleanliness_rating:'',
-            neighbors_rating:'',
-            price_rating:'',
-            delete_keyword: '',
-            delete_keyword_confirmation: '',
-            image_url: null
-        })
-        this.props.resetErrors()
-        // send to home when submitted succesfully
-        // window.location.href='/'
+    
+        setTimeout(() => {
+            if (this.props.errors.length === 0) {
+                window.history.back()
+            }
+        }, 300)
     }
 
     render() {
 
         const StateOptions = StatesList.map(state => <option value={state} key={state}>{state}</option>)
-        
         return (
             <form onSubmit={this.handleSubmit} className='new-property-form'>
                 <h1>Add a New Rental Property</h1>
@@ -205,4 +191,9 @@ class PropertyForm extends Component {
     }
 }
 
-export default connect(null, { postProperty, resetErrors })(PropertyForm)
+const mapStateToProps = state => ({ 
+    errors: state.properties.errors,
+    loading: state.properties.loading
+ })
+
+export default connect(mapStateToProps, { postProperty, resetErrors })(PropertyForm)
