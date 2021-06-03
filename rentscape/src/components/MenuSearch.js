@@ -26,12 +26,12 @@ class MenuSearch extends Component {
         if (this.state.state === 'All' && this.state.township === '' ) {
             properties = this.props.properties
         } else if (this.state.state === 'All') {
-            properties = properties.filter(property => property.township.toUpperCase() === this.state.township.toUpperCase())
+            properties = properties.filter(property => property.township.toUpperCase().search(this.state.township.toUpperCase()) !== -1)
         } else if (this.state.township === '') {
             properties = properties.filter(property => property.state === this.state.state)
         } else {
             properties = properties.filter(property => property.state === this.state.state)
-            properties = properties.filter(property => property.township.toUpperCase() === this.state.township.toUpperCase())
+            properties = properties.filter(property => property.township.toUpperCase().search(this.state.township.toUpperCase()) !== -1)
         }
         this.props.updateSortedProperties(properties)
         const num = this.state.resetSort === 1 ? 2 : 1
