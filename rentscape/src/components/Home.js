@@ -1,11 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 const Home = () => {
     
     return (
+        
         <div>
-            <> <Link className='property-card-link' to={'/'} >Home</Link> </>
+            <><button onClick={() => window.history.back()}>Home</button></>
         </div>
     )
 }
