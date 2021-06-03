@@ -21,6 +21,7 @@ class PropertyShow extends Component {
             password: this.state.password
         }
         this.props.deleteProperty(deleteObj)
+        window.history.back()
     }
     
     render() {

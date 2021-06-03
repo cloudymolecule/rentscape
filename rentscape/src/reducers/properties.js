@@ -1,4 +1,4 @@
-const properties = (state = { properties: [], sortedProperties: [], errors: [], loading: false }, action) => {
+const properties = (state = { properties: [], sortedProperties: [], errors: [], loading: true }, action) => {
     switch (action.type) {
         case 'LOADING_PROPERTIES':
             return {
@@ -7,13 +7,6 @@ const properties = (state = { properties: [], sortedProperties: [], errors: [], 
                 loading: true
             }
 
-        case 'LOADING_PROPERTY':
-            return {
-                ...state,
-                properties: [...state.properties],
-                loading: true
-            }
-        
         case 'ADD_PROPERTIES':
             return {
                 ...state,
@@ -21,6 +14,21 @@ const properties = (state = { properties: [], sortedProperties: [], errors: [], 
                 sortedProperties: action.properties,
                 loading: false
             }
+
+        case 'SAVING_PROPERTY':
+            return {
+                ...state,
+                properties: [...state.properties],
+                loading: true
+            }
+
+        case 'ADD_PROPERTY':
+                return {
+                    ...state,
+                    properties: [...state.properties, action.property],
+                    errors: [],
+                    loading: false
+                }
         
         case 'FORM_ERRORS':
             return {
@@ -36,21 +44,6 @@ const properties = (state = { properties: [], sortedProperties: [], errors: [], 
                 loading: false
             }
 
-        case 'SAVING_PROPERTY':
-            return {
-                ...state,
-                properties: [...state.properties],
-                loading: true
-            }
-        
-        case 'ADD_PROPERTY':
-            return {
-                ...state,
-                properties: [...state.properties, action.property],
-                errors: [],
-                loading: false
-            }
-
         case 'DELETING_PROPERTY':
             return {
                 ...state,
@@ -58,7 +51,11 @@ const properties = (state = { properties: [], sortedProperties: [], errors: [], 
             }
         
         case 'DELETE_PROPERTY':
-            return state
+            return {
+                ...state,
+                sortedProperties: state.sortedProperties.filter(({ id }) => id !== action.id),
+                loading: false
+            }
 
         case 'UPDATE_SORTED':
             return {

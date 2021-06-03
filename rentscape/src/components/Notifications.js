@@ -12,10 +12,8 @@ const Notifications = (props) => {
         } else if (props.totalProperties === 0) {
             return <p>0 results</p>
         } 
-        return <h1> </h1>
-        
+        return <p></p>
     }
-
     return (<>{notificationCheck()}</>)
 }
 

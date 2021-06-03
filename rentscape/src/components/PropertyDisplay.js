@@ -9,14 +9,11 @@ import { fetchProperty } from '../actions/fetchProperty'
 
 class PropertyDisplay extends Component {
     
-    state = {
-        property: []
-    }
-
     componentDidMount() {
         if (this.props.properties.length === 0) {
             this.props.fetchProperty(this.props.match.params.id)
         } 
+        
     }
 
     componentWillUnmount(){

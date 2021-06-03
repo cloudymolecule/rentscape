@@ -46,7 +46,10 @@ body {
   box-shadow: 5px 5px 12px rgb(255, 255, 255);
   background-color: rgb(223, 244, 250, 0.5);
   height: fit-content;
+  min-height: 4vh;
+  
 }
+p {  margin-top: 0.4em; margin-bottom: 0.4em; }
 
 .display {
   grid-area: display;
@@ -72,7 +75,7 @@ body {
 }
 
 .error-display {
-  background-color: rgb(255, 0, 0, 0.2);
+  background-color: rgba(255, 204, 0, 0.4);
 }
 
 .new-property-fields {

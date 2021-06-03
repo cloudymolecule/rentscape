@@ -23,7 +23,7 @@ class MenuSearch extends Component {
     handleSearchBttn = () => {
         let properties = this.props.properties
         
-        if (this.state.state === 'All' && this.state.township === '' ) {
+        if (this.state.state === 'All' && this.state.township === '') {
             properties = this.props.properties
         } else if (this.state.state === 'All') {
             properties = properties.filter(property => property.township.toUpperCase().search(this.state.township.toUpperCase()) !== -1)

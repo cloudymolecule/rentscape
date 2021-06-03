@@ -4,8 +4,6 @@ import StatesList from '../constants/StatesList'
 import { postProperty } from '../actions/postProperty'
 import { resetErrors } from '../actions/resetErrors'
 
-
-
 class PropertyForm extends Component {
     
     state = {
@@ -72,8 +70,7 @@ class PropertyForm extends Component {
         const StateOptions = StatesList.map(state => <option value={state} key={state}>{state}</option>)
         return (
             <form onSubmit={this.handleSubmit} className='new-property-form'>
-                <h1>Add a New Rental Property</h1>
-                
+                <h2>Add a New Rental Property</h2>
                 <div className='new-property-fields'>
                     <label>Address: </label>
                     <input onChange={this.handleChange} name='address' value={this.state.address}/>
