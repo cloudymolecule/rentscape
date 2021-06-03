@@ -23,6 +23,14 @@ class PropertyShow extends Component {
         this.props.deleteProperty(deleteObj)
         window.history.back()
     }
+
+    commaOrNot = () => {
+        if (this.props.address_2) {
+            return <li>{this.props.address} - {this.props.address_2}, {this.props.township} {this.props.state}</li>
+        } else {
+            return <li>{this.props.address}, {this.props.township} {this.props.state}</li>
+        }
+    }
     
     render() {
         return (
@@ -32,7 +40,7 @@ class PropertyShow extends Component {
                     <h2>{this.props.address}, {this.props.state}</h2>
                 <hr />
                 <ul>
-                    <li>{this.props.address} - {this.props.address_2}, {this.props.township} {this.props.state}</li>
+                    {this.commaOrNot()}
                     <li>Overall Rating: {this.props.overall_rating}</li>
                     <li>Landlord Rating: {this.props.landlord_rating}</li>
                     <li>Neighbors Rating: {this.props.neighbors_rating}</li>

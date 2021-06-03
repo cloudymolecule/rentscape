@@ -240,6 +240,17 @@ ul {
   grid-template-rows: 1fr;
 }
 
+.about {
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+  overflow: scroll;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: rgb(255, 255, 255, 0.3);
+  box-shadow: 5px 5px 12px rgb(255, 255, 255);
+}
+
 .logo {
   background-image: url("./images/logo.png");
   background-size:contain;
