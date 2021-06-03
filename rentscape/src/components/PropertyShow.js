@@ -35,17 +35,17 @@ class PropertyShow extends Component {
     render() {
         return (
             <div className="property-show">
-            <div className='property-show-info'>
-                <h1 className='property-show-title'>{this.props.address}, {this.props.state}</h1>
-                <ul className='property-show-data'>
-                    {this.commaOrNot()}
-                    <h4>Overall Rating: {this.props.overall_rating}</h4>
-                    <h4>Landlord Rating: {this.props.landlord_rating}</h4>
-                    <h4>Neighbors Rating: {this.props.neighbors_rating}</h4>
-                    <h4>Price Rating: {this.props.price_rating}</h4>
-                    <h4>Cleanliness Rating: {this.props.cleanliness_rating}</h4>
-                </ul>
-            </div>
+                <div className='property-show-info'>
+                    <h1 className='property-show-title'>{this.props.address}, {this.props.state}</h1>
+                    <ul className='property-show-data'>
+                        {this.commaOrNot()}
+                        <h4>Overall Rating: {this.props.overall_rating}</h4>
+                        <h4>Landlord Rating: {this.props.landlord_rating}</h4>
+                        <h4>Neighbors Rating: {this.props.neighbors_rating}</h4>
+                        <h4>Price Rating: {this.props.price_rating}</h4>
+                        <h4>Cleanliness Rating: {this.props.cleanliness_rating}</h4>
+                    </ul>
+                </div>
             <img className='property-show-image' src={this.props.image_url} alt=''/>
             <div className='property-show-review-container'>
                 <div className='property-show-review'>

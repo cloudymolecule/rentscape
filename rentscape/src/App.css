@@ -28,8 +28,13 @@ body {
   height: 100%;
   width: 100%;
   gap: 1%;
-  grid-template-columns: 1fr 0.2fr;
+  grid-template-columns: 1fr 0.3fr;
   grid-template-rows: 1fr;
+}
+
+.menu-search-label {
+  background-color: rgb(255, 255, 255, 0.3);
+  
 }
 
 .home-button {
@@ -120,12 +125,11 @@ p {  margin-top: 0.4em; margin-bottom: 0.4em; }
 }
 
 .flip-property-front {
-  background-color: rgba(255, 255, 255, 0.5);
-  color: black;
+  background-color: rgb(185, 216, 228);
+  color: rgb(0, 0, 0);
   background-size:auto;
   background-position: center;
-  background-color: rgba(255, 255, 255, 0.8);
-  background-blend-mode:saturation;
+  background-blend-mode:soft-light
 }
 
 .flip-property-back {
@@ -240,13 +244,6 @@ ul {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.3fr 0.3fr 0.3fr;
   text-align: center;
-}
-
-.menu-search-cont {
-  text-align: right;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
 }
 
 .about {

@@ -44,12 +44,12 @@ class MenuSearch extends Component {
 
         return (
             <div className='menu-search'>
-                <label>State: </label>
+                <label className='menu-search-label'>State: </label>
                 <select name='state' onChange={this.handleChange}>
                     <option value='All'>All</option>
                     {StateOptions}
                 </select>
-                <label>Township: </label>
+                <label className='menu-search-label'>Township: </label>
                 <input name='township' onChange={this.handleChange} value={this.state.township}/>
                 <SortBy resetSort={this.state.resetSort}/>
                 <button onClick={this.handleSearchBttn}>Search</button>
