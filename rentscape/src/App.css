@@ -54,6 +54,8 @@ p {  margin-top: 0.4em; margin-bottom: 0.4em; }
 .display {
   grid-area: display;
   overflow: auto;
+  background-color: rgb(255, 255, 255, 0.3);
+  box-shadow: 5px 5px 12px rgb(255, 255, 255);
 }
 
 .properties {
@@ -72,6 +74,7 @@ p {  margin-top: 0.4em; margin-bottom: 0.4em; }
   grid-template-columns: auto;
   grid-template-rows: auto;
   gap: 7%;
+  
 }
 
 .error-display {
