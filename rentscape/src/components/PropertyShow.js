@@ -26,9 +26,9 @@ class PropertyShow extends Component {
 
     commaOrNot = () => {
         if (this.props.address_2) {
-            return <li>{this.props.address} - {this.props.address_2}, {this.props.township} {this.props.state}</li>
+            return <h3>{this.props.address} - {this.props.address_2}, {this.props.township}, {this.props.state}</h3>
         } else {
-            return <li>{this.props.address}, {this.props.township} {this.props.state}</li>
+            return <h3>{this.props.address}, {this.props.township}, {this.props.state}</h3>
         }
     }
     
@@ -36,16 +36,14 @@ class PropertyShow extends Component {
         return (
             <div className="property-show">
             <div className='property-show-info'>
-                <hr />
-                    <h2>{this.props.address}, {this.props.state}</h2>
-                <hr />
-                <ul>
+                <h1 className='property-show-title'>{this.props.address}, {this.props.state}</h1>
+                <ul className='property-show-data'>
                     {this.commaOrNot()}
-                    <li>Overall Rating: {this.props.overall_rating}</li>
-                    <li>Landlord Rating: {this.props.landlord_rating}</li>
-                    <li>Neighbors Rating: {this.props.neighbors_rating}</li>
-                    <li>Price Rating: {this.props.price_rating}</li>
-                    <li>Cleanliness Rating: {this.props.cleanliness_rating}</li>
+                    <h4>Overall Rating: {this.props.overall_rating}</h4>
+                    <h4>Landlord Rating: {this.props.landlord_rating}</h4>
+                    <h4>Neighbors Rating: {this.props.neighbors_rating}</h4>
+                    <h4>Price Rating: {this.props.price_rating}</h4>
+                    <h4>Cleanliness Rating: {this.props.cleanliness_rating}</h4>
                 </ul>
             </div>
             <img className='property-show-image' src={this.props.image_url} alt=''/>
