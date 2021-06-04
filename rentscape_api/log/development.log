@@ -1,0 +1,781 @@
+Started GET "/properties" for ::1 at 2021-06-04 11:48:29 -0400
+Processing by PropertiesController#index as */*
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/properties_controller.rb:6:in `index'
+  [1m[36mProperty Load (4.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (1.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (1.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 7], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 15], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (262.99ms)
+Completed 200 OK in 294ms (Views: 292.0ms | ActiveRecord: 16.8ms | Allocations: 28997)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2008c87ba20c7389cc3daf0eb0d94b6e19b7fb91/analisse-taft-house-exterior-1587586144.jpg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3a660ad8d37a59489d85ce456e92c00517705135/9a7363e378855668cfc6ed3c3a1db25dl-m2876985967xd-w1020_h770_q80.jpg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--50b9530d0435fe7072d43a11b3fcb6a3bf4e6aba/image.jpg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--48c5752ae2b244c760cdd141f9d48924b7a7e6ac/defaultProperty.png" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2008c87ba20c7389cc3daf0eb0d94b6e19b7fb91", "filename"=>"analisse-taft-house-exterior-1587586144"}
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--50b9530d0435fe7072d43a11b3fcb6a3bf4e6aba", "filename"=>"image"}
+[36m  Disk Storage (1.4ms) [0m[34mGenerated URL for file at key: ehndy325e3zxytoew7jj96gjm7bs (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaV2h1Wkhrek1qVmxNM3A0ZVhSdlpYYzNhbW81Tm1kcWJUZGljd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVh4cGJteHBibVU3SUdacGJHVnVZVzFsUFNKaGJtRnNhWE56WlMxMFlXWjBMV2h2ZFhObExXVjRkR1Z5YVc5eUxURTFPRGMxT0RZeE5EUXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkaGJtRnNhWE56WlMxMFlXWjBMV2h2ZFhObExXVjRkR1Z5YVc5eUxURTFPRGMxT0RZeE5EUXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDYtMDRUMTU6NTM6MjkuNTQ1WiIsInB1ciI6ImJsb2Jfa2V5In19--a1cfd00d2a9d4704259a0b6f68cd372280365468/analisse-taft-house-exterior-1587586144.jpg)[0m
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaV2h1Wkhrek1qVmxNM3A0ZVhSdlpYYzNhbW81Tm1kcWJUZGljd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVh4cGJteHBibVU3SUdacGJHVnVZVzFsUFNKaGJtRnNhWE56WlMxMFlXWjBMV2h2ZFhObExXVjRkR1Z5YVc5eUxURTFPRGMxT0RZeE5EUXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkaGJtRnNhWE56WlMxMFlXWjBMV2h2ZFhObExXVjRkR1Z5YVc5eUxURTFPRGMxT0RZeE5EUXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDYtMDRUMTU6NTM6MjkuNTQ1WiIsInB1ciI6ImJsb2Jfa2V5In19--a1cfd00d2a9d4704259a0b6f68cd372280365468/analisse-taft-house-exterior-1587586144.jpg
+Completed 302 Found in 8ms (ActiveRecord: 0.2ms | Allocations: 2158)
+
+
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--48c5752ae2b244c760cdd141f9d48924b7a7e6ac", "filename"=>"defaultProperty"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3a660ad8d37a59489d85ce456e92c00517705135", "filename"=>"9a7363e378855668cfc6ed3c3a1db25dl-m2876985967xd-w1020_h770_q80"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--88a03b9d295ad3dfe966220c682221c82604334c/im-150208.jpeg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: ex2i96orveojwb5itb1ge0w3mib7 (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaWGd5YVRrMmIzSjJaVzlxZDJJMWFYUmlNV2RsTUhjemJXbGlOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWFwcGJteHBibVU3SUdacGJHVnVZVzFsUFNJNVlUY3pOak5sTXpjNE9EVTFOalk0WTJaak5tVmtNMk16WVRGa1lqSTFaR3d0YlRJNE56WTVPRFU1TmpkNFpDMTNNVEF5TUY5b056Y3dYM0U0TUM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KemxoTnpNMk0yVXpOemc0TlRVMk5qaGpabU0yWldRell6TmhNV1JpTWpWa2JDMXRNamczTmprNE5UazJOM2hrTFhjeE1ESXdYMmczTnpCZmNUZ3dMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDRUMTU6NTM6MjkuNTYxWiIsInB1ciI6ImJsb2Jfa2V5In19--cee4079539447a4dff97782da03e03aa6148b4df/9a7363e378855668cfc6ed3c3a1db25dl-m2876985967xd-w1020_h770_q80.jpg)[0m
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: 2rmg5s81tczr057o9m8ju474kjsj (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNbkp0WnpWek9ERjBZM3B5TURVM2J6bHRPR3AxTkRjMGEycHphZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SbFptRjFiSFJRY205d1pYSjBlUzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabUYxYkhSUWNtOXdaWEowZVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjU1N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ab472a4d46374c2a551e4681bb21500a2adb431f/defaultProperty.png)[0m
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: 63uehu30tetfg6ag3evinkujyv1t (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOak4xWldoMU16QjBaWFJtWnpaaFp6TmxkbWx1YTNWcWVYWXhkQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sdFlXZGxMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmFXMWhaMlV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjU2MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a523622b330fe2fff7df83ddded1999a8443d7a8/image.jpg)[0m
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaWGd5YVRrMmIzSjJaVzlxZDJJMWFYUmlNV2RsTUhjemJXbGlOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWFwcGJteHBibVU3SUdacGJHVnVZVzFsUFNJNVlUY3pOak5sTXpjNE9EVTFOalk0WTJaak5tVmtNMk16WVRGa1lqSTFaR3d0YlRJNE56WTVPRFU1TmpkNFpDMTNNVEF5TUY5b056Y3dYM0U0TUM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KemxoTnpNMk0yVXpOemc0TlRVMk5qaGpabU0yWldRell6TmhNV1JpTWpWa2JDMXRNamczTmprNE5UazJOM2hrTFhjeE1ESXdYMmczTnpCZmNUZ3dMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDRUMTU6NTM6MjkuNTYxWiIsInB1ciI6ImJsb2Jfa2V5In19--cee4079539447a4dff97782da03e03aa6148b4df/9a7363e378855668cfc6ed3c3a1db25dl-m2876985967xd-w1020_h770_q80.jpg
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNbkp0WnpWek9ERjBZM3B5TURVM2J6bHRPR3AxTkRjMGEycHphZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SbFptRjFiSFJRY205d1pYSjBlUzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabUYxYkhSUWNtOXdaWEowZVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjU1N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ab472a4d46374c2a551e4681bb21500a2adb431f/defaultProperty.png
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Completed 302 Found in 12ms (ActiveRecord: 0.2ms | Allocations: 4669)
+
+
+Completed 302 Found in 15ms (ActiveRecord: 1.0ms | Allocations: 5339)
+
+
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOak4xWldoMU16QjBaWFJtWnpaaFp6TmxkbWx1YTNWcWVYWXhkQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sdFlXZGxMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmFXMWhaMlV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjU2MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a523622b330fe2fff7df83ddded1999a8443d7a8/image.jpg
+Completed 302 Found in 18ms (ActiveRecord: 0.6ms | Allocations: 6233)
+
+
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--88a03b9d295ad3dfe966220c682221c82604334c", "filename"=>"im-150208"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: axzivkjw4q80haramgtuo6s4wtuf (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWGg2YVhacmFuYzBjVGd3YUdGeVlXMW5kSFZ2Tm5NMGQzUjFaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sdExURTFNREl3T0M1cWNHVm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWRwYlMweE5UQXlNRGd1YW5CbFp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjU2OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5ec0953996497f2771986ca7b1f124693652cff/im-150208.jpeg)[0m
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a255daaef8251a3d86edda3e9b5204b91e94a769/135462587.jpg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWGg2YVhacmFuYzBjVGd3YUdGeVlXMW5kSFZ2Tm5NMGQzUjFaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sdExURTFNREl3T0M1cWNHVm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWRwYlMweE5UQXlNRGd1YW5CbFp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjU2OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5ec0953996497f2771986ca7b1f124693652cff/im-150208.jpeg
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms | Allocations: 1498)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a255daaef8251a3d86edda3e9b5204b91e94a769", "filename"=>"135462587"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaV2h1Wkhrek1qVmxNM3A0ZVhSdlpYYzNhbW81Tm1kcWJUZGljd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVh4cGJteHBibVU3SUdacGJHVnVZVzFsUFNKaGJtRnNhWE56WlMxMFlXWjBMV2h2ZFhObExXVjRkR1Z5YVc5eUxURTFPRGMxT0RZeE5EUXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkaGJtRnNhWE56WlMxMFlXWjBMV2h2ZFhObExXVjRkR1Z5YVc5eUxURTFPRGMxT0RZeE5EUXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDYtMDRUMTU6NTM6MjkuNTQ1WiIsInB1ciI6ImJsb2Jfa2V5In19--a1cfd00d2a9d4704259a0b6f68cd372280365468/analisse-taft-house-exterior-1587586144.jpg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: flgiuwp1yjl1gglzz5o0u67ppi0h (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhabXhuYVhWM2NERjVhbXd4WjJkc2VubzFiekIxTmpkd2NHa3dhQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFek5UUTJNalU0Tnk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KekV6TlRRMk1qVTROeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjU4MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--49d879188e590d3632cddb96b823592753e36492/135462587.jpg)[0m
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhabXhuYVhWM2NERjVhbXd4WjJkc2VubzFiekIxTmpkd2NHa3dhQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFek5UUTJNalU0Tnk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KekV6TlRRMk1qVTROeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjU4MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--49d879188e590d3632cddb96b823592753e36492/135462587.jpg
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms | Allocations: 1753)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaWGd5YVRrMmIzSjJaVzlxZDJJMWFYUmlNV2RsTUhjemJXbGlOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWFwcGJteHBibVU3SUdacGJHVnVZVzFsUFNJNVlUY3pOak5sTXpjNE9EVTFOalk0WTJaak5tVmtNMk16WVRGa1lqSTFaR3d0YlRJNE56WTVPRFU1TmpkNFpDMTNNVEF5TUY5b056Y3dYM0U0TUM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KemxoTnpNMk0yVXpOemc0TlRVMk5qaGpabU0yWldRell6TmhNV1JpTWpWa2JDMXRNamczTmprNE5UazJOM2hrTFhjeE1ESXdYMmczTnpCZmNUZ3dMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDRUMTU6NTM6MjkuNTYxWiIsInB1ciI6ImJsb2Jfa2V5In19--cee4079539447a4dff97782da03e03aa6148b4df/9a7363e378855668cfc6ed3c3a1db25dl-m2876985967xd-w1020_h770_q80.jpg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisse-taft-house-exterior-1587586144"}
+Processing by ActiveStorage::DiskController#show as JPEG
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 180)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNbkp0WnpWek9ERjBZM3B5TURVM2J6bHRPR3AxTkRjMGEycHphZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SbFptRjFiSFJRY205d1pYSjBlUzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabUYxYkhSUWNtOXdaWEowZVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjU1N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ab472a4d46374c2a551e4681bb21500a2adb431f/defaultProperty.png" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"9a7363e378855668cfc6ed3c3a1db25dl-m2876985967xd-w1020_h770_q80"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOak4xWldoMU16QjBaWFJtWnpaaFp6TmxkbWx1YTNWcWVYWXhkQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sdFlXZGxMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmFXMWhaMlV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjU2MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a523622b330fe2fff7df83ddded1999a8443d7a8/image.jpg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"image"}
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"defaultProperty"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 173)
+
+
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 328)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWGg2YVhacmFuYzBjVGd3YUdGeVlXMW5kSFZ2Tm5NMGQzUjFaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sdExURTFNREl3T0M1cWNHVm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWRwYlMweE5UQXlNRGd1YW5CbFp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjU2OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5ec0953996497f2771986ca7b1f124693652cff/im-150208.jpeg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhabXhuYVhWM2NERjVhbXd4WjJkc2VubzFiekIxTmpkd2NHa3dhQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFek5UUTJNalU0Tnk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KekV6TlRRMk1qVTROeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjU4MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--49d879188e590d3632cddb96b823592753e36492/135462587.jpg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cb48e18d4ceae6fc8011bd36829ad355b7239e2d/135462587.jpg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"im-150208"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 178)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"135462587"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cb48e18d4ceae6fc8011bd36829ad355b7239e2d", "filename"=>"135462587"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 366)
+
+
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: dxu03vj664k5hnzhbwzgtjojrgcd (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaSGgxTUROMmFqWTJOR3MxYUc1NmFHSjNlbWQwYW05cWNtZGpaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFek5UUTJNalU0Tnk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KekV6TlRRMk1qVTROeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjYxOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--cecb2163fb53a01631059af5ad4a22a33f005e81/135462587.jpg)[0m
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaSGgxTUROMmFqWTJOR3MxYUc1NmFHSjNlbWQwYW05cWNtZGpaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFek5UUTJNalU0Tnk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KekV6TlRRMk1qVTROeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjYxOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--cecb2163fb53a01631059af5ad4a22a33f005e81/135462587.jpg
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms | Allocations: 1499)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8349d8b389eb8202ce06ff0336804e498ba7fdd6/defaultProperty.png" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e1ab07a8b4d8204b7f8210cb4f5f09ec15059153/shutterstock_135206831-1-e1565815548959.jpg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e1ab07a8b4d8204b7f8210cb4f5f09ec15059153", "filename"=>"shutterstock_135206831-1-e1565815548959"}
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8349d8b389eb8202ce06ff0336804e498ba7fdd6", "filename"=>"defaultProperty"}
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: b1rh7bi7yeh3j6m9a4d52cwl1p6b (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZakZ5YURkaWFUZDVaV2d6YWpadE9XRTBaRFV5WTNkc01YQTJZZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVh4cGJteHBibVU3SUdacGJHVnVZVzFsUFNKemFIVjBkR1Z5YzNSdlkydGZNVE0xTWpBMk9ETXhMVEV0WlRFMU5qVTRNVFUxTkRnNU5Ua3VhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkemFIVjBkR1Z5YzNSdlkydGZNVE0xTWpBMk9ETXhMVEV0WlRFMU5qVTRNVFUxTkRnNU5Ua3VhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDYtMDRUMTU6NTM6MjkuNjMyWiIsInB1ciI6ImJsb2Jfa2V5In19--19021a407baf6f328be8b311d0a1d21f978512c1/shutterstock_135206831-1-e1565815548959.jpg)[0m
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZakZ5YURkaWFUZDVaV2d6YWpadE9XRTBaRFV5WTNkc01YQTJZZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVh4cGJteHBibVU3SUdacGJHVnVZVzFsUFNKemFIVjBkR1Z5YzNSdlkydGZNVE0xTWpBMk9ETXhMVEV0WlRFMU5qVTRNVFUxTkRnNU5Ua3VhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkemFIVjBkR1Z5YzNSdlkydGZNVE0xTWpBMk9ETXhMVEV0WlRFMU5qVTRNVFUxTkRnNU5Ua3VhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDYtMDRUMTU6NTM6MjkuNjMyWiIsInB1ciI6ImJsb2Jfa2V5In19--19021a407baf6f328be8b311d0a1d21f978512c1/shutterstock_135206831-1-e1565815548959.jpg
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaSGgxTUROMmFqWTJOR3MxYUc1NmFHSjNlbWQwYW05cWNtZGpaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFek5UUTJNalU0Tnk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KekV6TlRRMk1qVTROeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjYxOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--cecb2163fb53a01631059af5ad4a22a33f005e81/135462587.jpg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: 3tgwkumdjdy6hli64uqkkjlivdrs (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNM1JuZDJ0MWJXUnFaSGsyYUd4cE5qUjFjV3RyYW14cGRtUnljd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SbFptRjFiSFJRY205d1pYSjBlUzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabUYxYkhSUWNtOXdaWEowZVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjYzNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--67dc1ec5d21bd48d13ff8963da77b07158ee6634/defaultProperty.png)[0m
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNM1JuZDJ0MWJXUnFaSGsyYUd4cE5qUjFjV3RyYW14cGRtUnljd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SbFptRjFiSFJRY205d1pYSjBlUzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabUYxYkhSUWNtOXdaWEowZVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjYzNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--67dc1ec5d21bd48d13ff8963da77b07158ee6634/defaultProperty.png
+Completed 302 Found in 9ms (ActiveRecord: 0.2ms | Allocations: 2498)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e01d70cb43199e64e9f80565d6c947062ccaabcf/montreal-rent-apartments.jpg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Completed 302 Found in 9ms (ActiveRecord: 0.1ms | Allocations: 2096)
+
+
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"135462587"}
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 542)
+
+
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e01d70cb43199e64e9f80565d6c947062ccaabcf", "filename"=>"montreal-rent-apartments"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: wy79n24y0gmanf0nrnevds8svscg (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkM2szT1c0eU5Ia3daMjFoYm1Zd2JuSnVaWFprY3poemRuTmpad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW0xdmJuUnlaV0ZzTFhKbGJuUXRZWEJoY25SdFpXNTBjeTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyMXZiblJ5WldGc0xYSmxiblF0WVhCaGNuUnRaVzUwY3k1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0wNi0wNFQxNTo1MzoyOS42NDhaIiwicHVyIjoiYmxvYl9rZXkifX0=--fcc4942b44deb6c02567f73d64abf2956c784119/montreal-rent-apartments.jpg)[0m
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkM2szT1c0eU5Ia3daMjFoYm1Zd2JuSnVaWFprY3poemRuTmpad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW0xdmJuUnlaV0ZzTFhKbGJuUXRZWEJoY25SdFpXNTBjeTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyMXZiblJ5WldGc0xYSmxiblF0WVhCaGNuUnRaVzUwY3k1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0wNi0wNFQxNTo1MzoyOS42NDhaIiwicHVyIjoiYmxvYl9rZXkifX0=--fcc4942b44deb6c02567f73d64abf2956c784119/montreal-rent-apartments.jpg
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 1131)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNM1JuZDJ0MWJXUnFaSGsyYUd4cE5qUjFjV3RyYW14cGRtUnljd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SbFptRjFiSFJRY205d1pYSjBlUzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabUYxYkhSUWNtOXdaWEowZVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjYzNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--67dc1ec5d21bd48d13ff8963da77b07158ee6634/defaultProperty.png" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZakZ5YURkaWFUZDVaV2d6YWpadE9XRTBaRFV5WTNkc01YQTJZZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVh4cGJteHBibVU3SUdacGJHVnVZVzFsUFNKemFIVjBkR1Z5YzNSdlkydGZNVE0xTWpBMk9ETXhMVEV0WlRFMU5qVTRNVFUxTkRnNU5Ua3VhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkemFIVjBkR1Z5YzNSdlkydGZNVE0xTWpBMk9ETXhMVEV0WlRFMU5qVTRNVFUxTkRnNU5Ua3VhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDYtMDRUMTU6NTM6MjkuNjMyWiIsInB1ciI6ImJsb2Jfa2V5In19--19021a407baf6f328be8b311d0a1d21f978512c1/shutterstock_135206831-1-e1565815548959.jpg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6d7c6bdaba81db83cc552a72fb991fc164601c45/b381ec2e7d6be964bd95ad996a707d09.jpeg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkM2szT1c0eU5Ia3daMjFoYm1Zd2JuSnVaWFprY3poemRuTmpad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW0xdmJuUnlaV0ZzTFhKbGJuUXRZWEJoY25SdFpXNTBjeTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyMXZiblJ5WldGc0xYSmxiblF0WVhCaGNuUnRaVzUwY3k1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0wNi0wNFQxNTo1MzoyOS42NDhaIiwicHVyIjoiYmxvYl9rZXkifX0=--fcc4942b44deb6c02567f73d64abf2956c784119/montreal-rent-apartments.jpg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"defaultProperty"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 167)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6d7c6bdaba81db83cc552a72fb991fc164601c45", "filename"=>"b381ec2e7d6be964bd95ad996a707d09"}
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"shutterstock_135206831-1-e1565815548959"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: bss66i93pahdbnntozk0330ex59m (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZbk56TmpacE9UTndZV2hrWW01dWRHOTZhekF6TXpCbGVEVTViUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpZFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Jek9ERmxZekpsTjJRMlltVTVOalJpWkRrMVlXUTVPVFpoTnpBM1pEQTVMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoySXpPREZsWXpKbE4yUTJZbVU1TmpSaVpEazFZV1E1T1RaaE56QTNaREE1TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0wNi0wNFQxNTo1MzoyOS42NjVaIiwicHVyIjoiYmxvYl9rZXkifX0=--7effdb12850afc4597a2ead5c4eecbef43576eeb/b381ec2e7d6be964bd95ad996a707d09.jpeg)[0m
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZbk56TmpacE9UTndZV2hrWW01dWRHOTZhekF6TXpCbGVEVTViUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpZFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Jek9ERmxZekpsTjJRMlltVTVOalJpWkRrMVlXUTVPVFpoTnpBM1pEQTVMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoySXpPREZsWXpKbE4yUTJZbVU1TmpSaVpEazFZV1E1T1RaaE56QTNaREE1TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0wNi0wNFQxNTo1MzoyOS42NjVaIiwicHVyIjoiYmxvYl9rZXkifX0=--7effdb12850afc4597a2ead5c4eecbef43576eeb/b381ec2e7d6be964bd95ad996a707d09.jpeg
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"montreal-rent-apartments"}
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1540)
+
+
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 339)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cc938e143f7e5efcc6e8c6855d3ee01cff0ea175/defaultProperty.png" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cc938e143f7e5efcc6e8c6855d3ee01cff0ea175", "filename"=>"defaultProperty"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: j57it0c5ylwrj9kdxn3zqh94lvzu (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhalUzYVhRd1l6VjViSGR5YWpsclpIaHVNM3B4YURrMGJIWjZkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SbFptRjFiSFJRY205d1pYSjBlUzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabUYxYkhSUWNtOXdaWEowZVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjY3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ed12016931e1c68274e86daf72fa39f40854bc8a/defaultProperty.png)[0m
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhalUzYVhRd1l6VjViSGR5YWpsclpIaHVNM3B4YURrMGJIWjZkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SbFptRjFiSFJRY205d1pYSjBlUzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabUYxYkhSUWNtOXdaWEowZVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjY3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ed12016931e1c68274e86daf72fa39f40854bc8a/defaultProperty.png
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZbk56TmpacE9UTndZV2hrWW01dWRHOTZhekF6TXpCbGVEVTViUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpZFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Jek9ERmxZekpsTjJRMlltVTVOalJpWkRrMVlXUTVPVFpoTnpBM1pEQTVMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoySXpPREZsWXpKbE4yUTJZbVU1TmpSaVpEazFZV1E1T1RaaE56QTNaREE1TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0wNi0wNFQxNTo1MzoyOS42NjVaIiwicHVyIjoiYmxvYl9rZXkifX0=--7effdb12850afc4597a2ead5c4eecbef43576eeb/b381ec2e7d6be964bd95ad996a707d09.jpeg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms | Allocations: 1474)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"b381ec2e7d6be964bd95ad996a707d09"}
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--983457111f2786dd0515a3147feadeea0eea7cad/200-16k-apartments.jpg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 433)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--983457111f2786dd0515a3147feadeea0eea7cad", "filename"=>"200-16k-apartments"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: blmi1dspold1whoeg3v331obypdj (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZbXh0YVRGa2MzQnZiR1F4ZDJodlpXY3pkak16TVc5aWVYQmthZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01DMHhObXN0WVhCaGNuUnRaVzUwY3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25Kekl3TUMweE5tc3RZWEJoY25SdFpXNTBjeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjY5MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a7576db123ee6155349590c52948dc9ddd88cdbd/200-16k-apartments.jpg)[0m
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhalUzYVhRd1l6VjViSGR5YWpsclpIaHVNM3B4YURrMGJIWjZkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SbFptRjFiSFJRY205d1pYSjBlUzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabUYxYkhSUWNtOXdaWEowZVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjY3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ed12016931e1c68274e86daf72fa39f40854bc8a/defaultProperty.png" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZbXh0YVRGa2MzQnZiR1F4ZDJodlpXY3pkak16TVc5aWVYQmthZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01DMHhObXN0WVhCaGNuUnRaVzUwY3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25Kekl3TUMweE5tc3RZWEJoY25SdFpXNTBjeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjY5MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a7576db123ee6155349590c52948dc9ddd88cdbd/200-16k-apartments.jpg
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 1412)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"defaultProperty"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 215)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZbXh0YVRGa2MzQnZiR1F4ZDJodlpXY3pkak16TVc5aWVYQmthZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01DMHhObXN0WVhCaGNuUnRaVzUwY3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25Kekl3TUMweE5tc3RZWEJoY25SdFpXNTBjeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjY5MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a7576db123ee6155349590c52948dc9ddd88cdbd/200-16k-apartments.jpg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"200-16k-apartments"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 171)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a3a2a2fd779323b036b404d080a6d8a246bb3d2e/960x0.jpg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a3a2a2fd779323b036b404d080a6d8a246bb3d2e", "filename"=>"960x0"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: dlllq32rald56nase4yvonm47q7n (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR3hzYkhFek1uSmhiR1ExTm01aGMyVTBlWFp2Ym0wME4zRTNiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWprMk1IZ3dMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk9UWXdlREF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjcxNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f3e8069a71d111fd4300f01c70be6e6f729e3ba8/960x0.jpg)[0m
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR3hzYkhFek1uSmhiR1ExTm01aGMyVTBlWFp2Ym0wME4zRTNiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWprMk1IZ3dMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk9UWXdlREF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjcxNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f3e8069a71d111fd4300f01c70be6e6f729e3ba8/960x0.jpg
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1173)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR3hzYkhFek1uSmhiR1ExTm01aGMyVTBlWFp2Ym0wME4zRTNiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWprMk1IZ3dMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk9UWXdlREF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjcxNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f3e8069a71d111fd4300f01c70be6e6f729e3ba8/960x0.jpg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"960x0"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 167)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b0b187cd2f15cdec9b65acf9d407b43e58241410/DJI_0028-HDR.jpg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b0b187cd2f15cdec9b65acf9d407b43e58241410", "filename"=>"DJI_0028-HDR"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: hkhcrnjbcp29c1njjylxkodfn66d (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhR3RvWTNKdWFtSmpjREk1WXpGdWFtcDViSGhyYjJSbWJqWTJaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtSS1NWOHdNREk0TFVoRVVpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjBSS1NWOHdNREk0TFVoRVVpNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjEtMDYtMDRUMTU6NTM6MjkuODkyWiIsInB1ciI6ImJsb2Jfa2V5In19--472a1b3f760ecaf152082132fe97c050fc9ebc45/DJI_0028-HDR.jpg)[0m
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhR3RvWTNKdWFtSmpjREk1WXpGdWFtcDViSGhyYjJSbWJqWTJaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtSS1NWOHdNREk0TFVoRVVpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjBSS1NWOHdNREk0TFVoRVVpNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjEtMDYtMDRUMTU6NTM6MjkuODkyWiIsInB1ciI6ImJsb2Jfa2V5In19--472a1b3f760ecaf152082132fe97c050fc9ebc45/DJI_0028-HDR.jpg
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 1128)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhR3RvWTNKdWFtSmpjREk1WXpGdWFtcDViSGhyYjJSbWJqWTJaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtSS1NWOHdNREk0TFVoRVVpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjBSS1NWOHdNREk0TFVoRVVpNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjEtMDYtMDRUMTU6NTM6MjkuODkyWiIsInB1ciI6ImJsb2Jfa2V5In19--472a1b3f760ecaf152082132fe97c050fc9ebc45/DJI_0028-HDR.jpg" for 127.0.0.1 at 2021-06-04 11:48:29 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"DJI_0028-HDR"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 167)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--983457111f2786dd0515a3147feadeea0eea7cad/200-16k-apartments.jpg" for 127.0.0.1 at 2021-06-04 11:48:32 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--983457111f2786dd0515a3147feadeea0eea7cad", "filename"=>"200-16k-apartments"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: blmi1dspold1whoeg3v331obypdj (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZbXh0YVRGa2MzQnZiR1F4ZDJodlpXY3pkak16TVc5aWVYQmthZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01DMHhObXN0WVhCaGNuUnRaVzUwY3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25Kekl3TUMweE5tc3RZWEJoY25SdFpXNTBjeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjMyLjgxN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--49d4aeb4a8613d99e2bbd17afdcfde7fc147685e/200-16k-apartments.jpg)[0m
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZbXh0YVRGa2MzQnZiR1F4ZDJodlpXY3pkak16TVc5aWVYQmthZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01DMHhObXN0WVhCaGNuUnRaVzUwY3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25Kekl3TUMweE5tc3RZWEJoY25SdFpXNTBjeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjMyLjgxN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--49d4aeb4a8613d99e2bbd17afdcfde7fc147685e/200-16k-apartments.jpg
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 1128)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZbXh0YVRGa2MzQnZiR1F4ZDJodlpXY3pkak16TVc5aWVYQmthZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01DMHhObXN0WVhCaGNuUnRaVzUwY3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25Kekl3TUMweE5tc3RZWEJoY25SdFpXNTBjeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjMyLjgxN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--49d4aeb4a8613d99e2bbd17afdcfde7fc147685e/200-16k-apartments.jpg" for 127.0.0.1 at 2021-06-04 11:48:32 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"200-16k-apartments"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 167)
+
+
+Started POST "/validate" for ::1 at 2021-06-04 11:48:34 -0400
+Processing by PropertiesController#validate_destroy as JSON
+  Parameters: {"id"=>15, "password"=>"[FILTERED]", "property"=>{"id"=>15}}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:33:in `set_property'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 204ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 664)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--983457111f2786dd0515a3147feadeea0eea7cad/200-16k-apartments.jpg" for 127.0.0.1 at 2021-06-04 11:48:57 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--983457111f2786dd0515a3147feadeea0eea7cad", "filename"=>"200-16k-apartments"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: blmi1dspold1whoeg3v331obypdj (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZbXh0YVRGa2MzQnZiR1F4ZDJodlpXY3pkak16TVc5aWVYQmthZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01DMHhObXN0WVhCaGNuUnRaVzUwY3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25Kekl3TUMweE5tc3RZWEJoY25SdFpXNTBjeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjU3LjE1OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a3dc137fc491ca1c515987a919db16001c44be6d/200-16k-apartments.jpg)[0m
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZbXh0YVRGa2MzQnZiR1F4ZDJodlpXY3pkak16TVc5aWVYQmthZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01DMHhObXN0WVhCaGNuUnRaVzUwY3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25Kekl3TUMweE5tc3RZWEJoY25SdFpXNTBjeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjU3LjE1OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a3dc137fc491ca1c515987a919db16001c44be6d/200-16k-apartments.jpg
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1129)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZbXh0YVRGa2MzQnZiR1F4ZDJodlpXY3pkak16TVc5aWVYQmthZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01DMHhObXN0WVhCaGNuUnRaVzUwY3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25Kekl3TUMweE5tc3RZWEJoY25SdFpXNTBjeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjU3LjE1OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a3dc137fc491ca1c515987a919db16001c44be6d/200-16k-apartments.jpg" for 127.0.0.1 at 2021-06-04 11:48:57 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"200-16k-apartments"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 167)
+
+
+Started GET "/properties" for ::1 at 2021-06-04 11:49:43 -0400
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOak4xWldoMU16QjBaWFJtWnpaaFp6TmxkbWx1YTNWcWVYWXhkQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sdFlXZGxMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmFXMWhaMlV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjU2MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a523622b330fe2fff7df83ddded1999a8443d7a8/image.jpg" for 127.0.0.1 at 2021-06-04 11:49:44 -0400
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR3hzYkhFek1uSmhiR1ExTm01aGMyVTBlWFp2Ym0wME4zRTNiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWprMk1IZ3dMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk9UWXdlREF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjcxNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f3e8069a71d111fd4300f01c70be6e6f729e3ba8/960x0.jpg" for 127.0.0.1 at 2021-06-04 11:49:44 -0400
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaWGd5YVRrMmIzSjJaVzlxZDJJMWFYUmlNV2RsTUhjemJXbGlOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWFwcGJteHBibVU3SUdacGJHVnVZVzFsUFNJNVlUY3pOak5sTXpjNE9EVTFOalk0WTJaak5tVmtNMk16WVRGa1lqSTFaR3d0YlRJNE56WTVPRFU1TmpkNFpDMTNNVEF5TUY5b056Y3dYM0U0TUM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KemxoTnpNMk0yVXpOemc0TlRVMk5qaGpabU0yWldRell6TmhNV1JpTWpWa2JDMXRNamczTmprNE5UazJOM2hrTFhjeE1ESXdYMmczTnpCZmNUZ3dMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDRUMTU6NTM6MjkuNTYxWiIsInB1ciI6ImJsb2Jfa2V5In19--cee4079539447a4dff97782da03e03aa6148b4df/9a7363e378855668cfc6ed3c3a1db25dl-m2876985967xd-w1020_h770_q80.jpg" for 127.0.0.1 at 2021-06-04 11:49:44 -0400
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWGg2YVhacmFuYzBjVGd3YUdGeVlXMW5kSFZ2Tm5NMGQzUjFaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sdExURTFNREl3T0M1cWNHVm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWRwYlMweE5UQXlNRGd1YW5CbFp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjU2OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5ec0953996497f2771986ca7b1f124693652cff/im-150208.jpeg" for 127.0.0.1 at 2021-06-04 11:49:44 -0400
+Processing by PropertiesController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/properties_controller.rb:6:in `index'
+  [1m[36mProperty Load (1.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 7], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 15], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (75.12ms)
+Completed 200 OK in 118ms (Views: 103.6ms | ActiveRecord: 8.5ms | Allocations: 51955)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"im-150208"}
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"9a7363e378855668cfc6ed3c3a1db25dl-m2876985967xd-w1020_h770_q80"}
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"image"}
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"960x0"}
+Completed 304 Not Modified in 4ms (Allocations: 2996)
+
+
+Completed 304 Not Modified in 7ms (Allocations: 4096)
+
+
+Completed 304 Not Modified in 5ms (Allocations: 3402)
+
+
+Completed 304 Not Modified in 5ms (Allocations: 3286)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNbkp0WnpWek9ERjBZM3B5TURVM2J6bHRPR3AxTkRjMGEycHphZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SbFptRjFiSFJRY205d1pYSjBlUzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabUYxYkhSUWNtOXdaWEowZVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjU1N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ab472a4d46374c2a551e4681bb21500a2adb431f/defaultProperty.png" for 127.0.0.1 at 2021-06-04 11:49:44 -0400
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"defaultProperty"}
+Completed 304 Not Modified in 1ms (Allocations: 159)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaSGgxTUROMmFqWTJOR3MxYUc1NmFHSjNlbWQwYW05cWNtZGpaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFek5UUTJNalU0Tnk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KekV6TlRRMk1qVTROeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjYxOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--cecb2163fb53a01631059af5ad4a22a33f005e81/135462587.jpg" for 127.0.0.1 at 2021-06-04 11:49:44 -0400
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNM1JuZDJ0MWJXUnFaSGsyYUd4cE5qUjFjV3RyYW14cGRtUnljd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SbFptRjFiSFJRY205d1pYSjBlUzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabUYxYkhSUWNtOXdaWEowZVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjYzNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--67dc1ec5d21bd48d13ff8963da77b07158ee6634/defaultProperty.png" for 127.0.0.1 at 2021-06-04 11:49:44 -0400
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZakZ5YURkaWFUZDVaV2d6YWpadE9XRTBaRFV5WTNkc01YQTJZZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVh4cGJteHBibVU3SUdacGJHVnVZVzFsUFNKemFIVjBkR1Z5YzNSdlkydGZNVE0xTWpBMk9ETXhMVEV0WlRFMU5qVTRNVFUxTkRnNU5Ua3VhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkemFIVjBkR1Z5YzNSdlkydGZNVE0xTWpBMk9ETXhMVEV0WlRFMU5qVTRNVFUxTkRnNU5Ua3VhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDYtMDRUMTU6NTM6MjkuNjMyWiIsInB1ciI6ImJsb2Jfa2V5In19--19021a407baf6f328be8b311d0a1d21f978512c1/shutterstock_135206831-1-e1565815548959.jpg" for 127.0.0.1 at 2021-06-04 11:49:44 -0400
+Processing by ActiveStorage::DiskController#show as PNG
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"135462587"}
+Processing by ActiveStorage::DiskController#show as JPEG
+Completed 304 Not Modified in 0ms (Allocations: 159)
+
+
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"shutterstock_135206831-1-e1565815548959"}
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"defaultProperty"}
+Completed 304 Not Modified in 1ms (Allocations: 216)
+
+
+Completed 304 Not Modified in 4ms (Allocations: 372)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkM2szT1c0eU5Ia3daMjFoYm1Zd2JuSnVaWFprY3poemRuTmpad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW0xdmJuUnlaV0ZzTFhKbGJuUXRZWEJoY25SdFpXNTBjeTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyMXZiblJ5WldGc0xYSmxiblF0WVhCaGNuUnRaVzUwY3k1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0wNi0wNFQxNTo1MzoyOS42NDhaIiwicHVyIjoiYmxvYl9rZXkifX0=--fcc4942b44deb6c02567f73d64abf2956c784119/montreal-rent-apartments.jpg" for 127.0.0.1 at 2021-06-04 11:49:44 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"montreal-rent-apartments"}
+Completed 304 Not Modified in 1ms (Allocations: 159)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZbk56TmpacE9UTndZV2hrWW01dWRHOTZhekF6TXpCbGVEVTViUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpZFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Jek9ERmxZekpsTjJRMlltVTVOalJpWkRrMVlXUTVPVFpoTnpBM1pEQTVMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoySXpPREZsWXpKbE4yUTJZbVU1TmpSaVpEazFZV1E1T1RaaE56QTNaREE1TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0wNi0wNFQxNTo1MzoyOS42NjVaIiwicHVyIjoiYmxvYl9rZXkifX0=--7effdb12850afc4597a2ead5c4eecbef43576eeb/b381ec2e7d6be964bd95ad996a707d09.jpeg" for 127.0.0.1 at 2021-06-04 11:49:44 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"b381ec2e7d6be964bd95ad996a707d09"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhalUzYVhRd1l6VjViSGR5YWpsclpIaHVNM3B4YURrMGJIWjZkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SbFptRjFiSFJRY205d1pYSjBlUzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabUYxYkhSUWNtOXdaWEowZVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjY3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ed12016931e1c68274e86daf72fa39f40854bc8a/defaultProperty.png" for 127.0.0.1 at 2021-06-04 11:49:44 -0400
+Completed 304 Not Modified in 1ms (Allocations: 168)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"defaultProperty"}
+Completed 304 Not Modified in 1ms (Allocations: 159)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhR3RvWTNKdWFtSmpjREk1WXpGdWFtcDViSGhyYjJSbWJqWTJaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtSS1NWOHdNREk0TFVoRVVpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjBSS1NWOHdNREk0TFVoRVVpNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjEtMDYtMDRUMTU6NTM6MjkuODkyWiIsInB1ciI6ImJsb2Jfa2V5In19--472a1b3f760ecaf152082132fe97c050fc9ebc45/DJI_0028-HDR.jpg" for 127.0.0.1 at 2021-06-04 11:49:44 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"DJI_0028-HDR"}
+Completed 304 Not Modified in 1ms (Allocations: 161)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhabXhuYVhWM2NERjVhbXd4WjJkc2VubzFiekIxTmpkd2NHa3dhQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFek5UUTJNalU0Tnk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KekV6TlRRMk1qVTROeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE1OjUzOjI5LjU4MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--49d879188e590d3632cddb96b823592753e36492/135462587.jpg" for 127.0.0.1 at 2021-06-04 11:49:44 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"135462587"}
+Completed 304 Not Modified in 0ms (Allocations: 159)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a3a2a2fd779323b036b404d080a6d8a246bb3d2e/960x0.jpg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3a660ad8d37a59489d85ce456e92c00517705135/9a7363e378855668cfc6ed3c3a1db25dl-m2876985967xd-w1020_h770_q80.jpg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--48c5752ae2b244c760cdd141f9d48924b7a7e6ac/defaultProperty.png" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--50b9530d0435fe7072d43a11b3fcb6a3bf4e6aba/image.jpg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+Started GET "/properties" for ::1 at 2021-06-04 12:21:27 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--48c5752ae2b244c760cdd141f9d48924b7a7e6ac", "filename"=>"defaultProperty"}
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--50b9530d0435fe7072d43a11b3fcb6a3bf4e6aba", "filename"=>"image"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[36m  Disk Storage (3.1ms) [0m[34mGenerated URL for file at key: 2rmg5s81tczr057o9m8ju474kjsj (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNbkp0WnpWek9ERjBZM3B5TURVM2J6bHRPR3AxTkRjMGEycHphZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SbFptRjFiSFJRY205d1pYSjBlUzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabUYxYkhSUWNtOXdaWEowZVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjE0MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--eeb80e5d001960d7a987c5e66deb9523dfbb1b5f/defaultProperty.png)[0m
+[36m  Disk Storage (1.5ms) [0m[34mGenerated URL for file at key: 63uehu30tetfg6ag3evinkujyv1t (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOak4xWldoMU16QjBaWFJtWnpaaFp6TmxkbWx1YTNWcWVYWXhkQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sdFlXZGxMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmFXMWhaMlV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjE0N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--107e5abfaf9ef8e72d4665c7adb2640bef0cdf92/image.jpg)[0m
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNbkp0WnpWek9ERjBZM3B5TURVM2J6bHRPR3AxTkRjMGEycHphZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SbFptRjFiSFJRY205d1pYSjBlUzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabUYxYkhSUWNtOXdaWEowZVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjE0MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--eeb80e5d001960d7a987c5e66deb9523dfbb1b5f/defaultProperty.png
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOak4xWldoMU16QjBaWFJtWnpaaFp6TmxkbWx1YTNWcWVYWXhkQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sdFlXZGxMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmFXMWhaMlV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjE0N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--107e5abfaf9ef8e72d4665c7adb2640bef0cdf92/image.jpg
+Completed 302 Found in 58ms (ActiveRecord: 3.3ms | Allocations: 9173)
+
+
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3a660ad8d37a59489d85ce456e92c00517705135", "filename"=>"9a7363e378855668cfc6ed3c3a1db25dl-m2876985967xd-w1020_h770_q80"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a3a2a2fd779323b036b404d080a6d8a246bb3d2e", "filename"=>"960x0"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Completed 302 Found in 50ms (ActiveRecord: 1.0ms | Allocations: 8927)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: dlllq32rald56nase4yvonm47q7n (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR3hzYkhFek1uSmhiR1ExTm01aGMyVTBlWFp2Ym0wME4zRTNiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWprMk1IZ3dMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk9UWXdlREF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjE2OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a3856649f9fb2f716aca96cdf17662a5b8ac69b5/960x0.jpg)[0m
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--88a03b9d295ad3dfe966220c682221c82604334c/im-150208.jpeg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a255daaef8251a3d86edda3e9b5204b91e94a769/135462587.jpg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR3hzYkhFek1uSmhiR1ExTm01aGMyVTBlWFp2Ym0wME4zRTNiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWprMk1IZ3dMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk9UWXdlREF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjE2OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a3856649f9fb2f716aca96cdf17662a5b8ac69b5/960x0.jpg
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: ex2i96orveojwb5itb1ge0w3mib7 (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaWGd5YVRrMmIzSjJaVzlxZDJJMWFYUmlNV2RsTUhjemJXbGlOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWFwcGJteHBibVU3SUdacGJHVnVZVzFsUFNJNVlUY3pOak5sTXpjNE9EVTFOalk0WTJaak5tVmtNMk16WVRGa1lqSTFaR3d0YlRJNE56WTVPRFU1TmpkNFpDMTNNVEF5TUY5b056Y3dYM0U0TUM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KemxoTnpNMk0yVXpOemc0TlRVMk5qaGpabU0yWldRell6TmhNV1JpTWpWa2JDMXRNamczTmprNE5UazJOM2hrTFhjeE1ESXdYMmczTnpCZmNUZ3dMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDRUMTY6MjY6MjcuMTczWiIsInB1ciI6ImJsb2Jfa2V5In19--9ae4e82092b90c47d94ea98d7a9260d5971590bb/9a7363e378855668cfc6ed3c3a1db25dl-m2876985967xd-w1020_h770_q80.jpg)[0m
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaWGd5YVRrMmIzSjJaVzlxZDJJMWFYUmlNV2RsTUhjemJXbGlOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWFwcGJteHBibVU3SUdacGJHVnVZVzFsUFNJNVlUY3pOak5sTXpjNE9EVTFOalk0WTJaak5tVmtNMk16WVRGa1lqSTFaR3d0YlRJNE56WTVPRFU1TmpkNFpDMTNNVEF5TUY5b056Y3dYM0U0TUM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KemxoTnpNMk0yVXpOemc0TlRVMk5qaGpabU0yWldRell6TmhNV1JpTWpWa2JDMXRNamczTmprNE5UazJOM2hrTFhjeE1ESXdYMmczTnpCZmNUZ3dMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDRUMTY6MjY6MjcuMTczWiIsInB1ciI6ImJsb2Jfa2V5In19--9ae4e82092b90c47d94ea98d7a9260d5971590bb/9a7363e378855668cfc6ed3c3a1db25dl-m2876985967xd-w1020_h770_q80.jpg
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Completed 302 Found in 24ms (ActiveRecord: 0.7ms | Allocations: 5666)
+
+
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a255daaef8251a3d86edda3e9b5204b91e94a769", "filename"=>"135462587"}
+Completed 302 Found in 17ms (ActiveRecord: 1.4ms | Allocations: 4501)
+
+
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--88a03b9d295ad3dfe966220c682221c82604334c", "filename"=>"im-150208"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: axzivkjw4q80haramgtuo6s4wtuf (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWGg2YVhacmFuYzBjVGd3YUdGeVlXMW5kSFZ2Tm5NMGQzUjFaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sdExURTFNREl3T0M1cWNHVm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWRwYlMweE5UQXlNRGd1YW5CbFp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjE4NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b128f666c59a01f649f45cea83166da0cf48d3f4/im-150208.jpeg)[0m
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWGg2YVhacmFuYzBjVGd3YUdGeVlXMW5kSFZ2Tm5NMGQzUjFaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sdExURTFNREl3T0M1cWNHVm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWRwYlMweE5UQXlNRGd1YW5CbFp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjE4NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b128f666c59a01f649f45cea83166da0cf48d3f4/im-150208.jpeg
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOak4xWldoMU16QjBaWFJtWnpaaFp6TmxkbWx1YTNWcWVYWXhkQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sdFlXZGxMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmFXMWhaMlV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjE0N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--107e5abfaf9ef8e72d4665c7adb2640bef0cdf92/image.jpg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+Completed 302 Found in 9ms (ActiveRecord: 0.2ms | Allocations: 2672)
+
+
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: flgiuwp1yjl1gglzz5o0u67ppi0h (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhabXhuYVhWM2NERjVhbXd4WjJkc2VubzFiekIxTmpkd2NHa3dhQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFek5UUTJNalU0Tnk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KekV6TlRRMk1qVTROeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjE4OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--cd6accba23b54674fff1d4b153bdffedef8f92ac/135462587.jpg)[0m
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNbkp0WnpWek9ERjBZM3B5TURVM2J6bHRPR3AxTkRjMGEycHphZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SbFptRjFiSFJRY205d1pYSjBlUzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabUYxYkhSUWNtOXdaWEowZVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjE0MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--eeb80e5d001960d7a987c5e66deb9523dfbb1b5f/defaultProperty.png" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhabXhuYVhWM2NERjVhbXd4WjJkc2VubzFiekIxTmpkd2NHa3dhQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFek5UUTJNalU0Tnk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KekV6TlRRMk1qVTROeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjE4OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--cd6accba23b54674fff1d4b153bdffedef8f92ac/135462587.jpg
+Completed 302 Found in 15ms (ActiveRecord: 0.3ms | Allocations: 3782)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaWGd5YVRrMmIzSjJaVzlxZDJJMWFYUmlNV2RsTUhjemJXbGlOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWFwcGJteHBibVU3SUdacGJHVnVZVzFsUFNJNVlUY3pOak5sTXpjNE9EVTFOalk0WTJaak5tVmtNMk16WVRGa1lqSTFaR3d0YlRJNE56WTVPRFU1TmpkNFpDMTNNVEF5TUY5b056Y3dYM0U0TUM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KemxoTnpNMk0yVXpOemc0TlRVMk5qaGpabU0yWldRell6TmhNV1JpTWpWa2JDMXRNamczTmprNE5UazJOM2hrTFhjeE1ESXdYMmczTnpCZmNUZ3dMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDRUMTY6MjY6MjcuMTczWiIsInB1ciI6ImJsb2Jfa2V5In19--9ae4e82092b90c47d94ea98d7a9260d5971590bb/9a7363e378855668cfc6ed3c3a1db25dl-m2876985967xd-w1020_h770_q80.jpg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+Processing by ActiveStorage::DiskController#show as PNG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR3hzYkhFek1uSmhiR1ExTm01aGMyVTBlWFp2Ym0wME4zRTNiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWprMk1IZ3dMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk9UWXdlREF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjE2OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a3856649f9fb2f716aca96cdf17662a5b8ac69b5/960x0.jpg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"image"}
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"defaultProperty"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 167)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"9a7363e378855668cfc6ed3c3a1db25dl-m2876985967xd-w1020_h770_q80"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 519)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 344)
+
+
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"960x0"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWGg2YVhacmFuYzBjVGd3YUdGeVlXMW5kSFZ2Tm5NMGQzUjFaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sdExURTFNREl3T0M1cWNHVm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWRwYlMweE5UQXlNRGd1YW5CbFp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjE4NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b128f666c59a01f649f45cea83166da0cf48d3f4/im-150208.jpeg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhabXhuYVhWM2NERjVhbXd4WjJkc2VubzFiekIxTmpkd2NHa3dhQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFek5UUTJNalU0Tnk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KekV6TlRRMk1qVTROeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjE4OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--cd6accba23b54674fff1d4b153bdffedef8f92ac/135462587.jpg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"im-150208"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"135462587"}
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cb48e18d4ceae6fc8011bd36829ad355b7239e2d/135462587.jpg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 313)
+
+
+Completed 200 OK in 8ms (ActiveRecord: 0.0ms | Allocations: 978)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cb48e18d4ceae6fc8011bd36829ad355b7239e2d", "filename"=>"135462587"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: dxu03vj664k5hnzhbwzgtjojrgcd (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaSGgxTUROMmFqWTJOR3MxYUc1NmFHSjNlbWQwYW05cWNtZGpaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFek5UUTJNalU0Tnk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KekV6TlRRMk1qVTROeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjI0MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c0806cf385c94d7b2bfa845dc97ad4b7f2efc0a9/135462587.jpg)[0m
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaSGgxTUROMmFqWTJOR3MxYUc1NmFHSjNlbWQwYW05cWNtZGpaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFek5UUTJNalU0Tnk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KekV6TlRRMk1qVTROeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjI0MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c0806cf385c94d7b2bfa845dc97ad4b7f2efc0a9/135462587.jpg
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms | Allocations: 1164)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8349d8b389eb8202ce06ff0336804e498ba7fdd6/defaultProperty.png" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e1ab07a8b4d8204b7f8210cb4f5f09ec15059153/shutterstock_135206831-1-e1565815548959.jpg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaSGgxTUROMmFqWTJOR3MxYUc1NmFHSjNlbWQwYW05cWNtZGpaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFek5UUTJNalU0Tnk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KekV6TlRRMk1qVTROeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjI0MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c0806cf385c94d7b2bfa845dc97ad4b7f2efc0a9/135462587.jpg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8349d8b389eb8202ce06ff0336804e498ba7fdd6", "filename"=>"defaultProperty"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e1ab07a8b4d8204b7f8210cb4f5f09ec15059153", "filename"=>"shutterstock_135206831-1-e1565815548959"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"135462587"}
+Processing by PropertiesController#index as */*
+[36m  Disk Storage (2.3ms) [0m[34mGenerated URL for file at key: b1rh7bi7yeh3j6m9a4d52cwl1p6b (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZakZ5YURkaWFUZDVaV2d6YWpadE9XRTBaRFV5WTNkc01YQTJZZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVh4cGJteHBibVU3SUdacGJHVnVZVzFsUFNKemFIVjBkR1Z5YzNSdlkydGZNVE0xTWpBMk9ETXhMVEV0WlRFMU5qVTRNVFUxTkRnNU5Ua3VhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkemFIVjBkR1Z5YzNSdlkydGZNVE0xTWpBMk9ETXhMVEV0WlRFMU5qVTRNVFUxTkRnNU5Ua3VhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDYtMDRUMTY6MjY6MjcuMjczWiIsInB1ciI6ImJsb2Jfa2V5In19--a64184e6c083eb602b7c3c088c1b55d6de5b1def/shutterstock_135206831-1-e1565815548959.jpg)[0m
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: 3tgwkumdjdy6hli64uqkkjlivdrs (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNM1JuZDJ0MWJXUnFaSGsyYUd4cE5qUjFjV3RyYW14cGRtUnljd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SbFptRjFiSFJRY205d1pYSjBlUzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabUYxYkhSUWNtOXdaWEowZVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjI3MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bcff392bfc1d18f1489e0523b1222eaadf415db0/defaultProperty.png)[0m
+Completed 200 OK in 49ms (ActiveRecord: 0.0ms | Allocations: 2600)
+
+
+  [1m[36mProperty Load (2.1ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZakZ5YURkaWFUZDVaV2d6YWpadE9XRTBaRFV5WTNkc01YQTJZZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVh4cGJteHBibVU3SUdacGJHVnVZVzFsUFNKemFIVjBkR1Z5YzNSdlkydGZNVE0xTWpBMk9ETXhMVEV0WlRFMU5qVTRNVFUxTkRnNU5Ua3VhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkemFIVjBkR1Z5YzNSdlkydGZNVE0xTWpBMk9ETXhMVEV0WlRFMU5qVTRNVFUxTkRnNU5Ua3VhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDYtMDRUMTY6MjY6MjcuMjczWiIsInB1ciI6ImJsb2Jfa2V5In19--a64184e6c083eb602b7c3c088c1b55d6de5b1def/shutterstock_135206831-1-e1565815548959.jpg
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNM1JuZDJ0MWJXUnFaSGsyYUd4cE5qUjFjV3RyYW14cGRtUnljd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SbFptRjFiSFJRY205d1pYSjBlUzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabUYxYkhSUWNtOXdaWEowZVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjI3MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bcff392bfc1d18f1489e0523b1222eaadf415db0/defaultProperty.png
+Completed 302 Found in 65ms (ActiveRecord: 0.4ms | Allocations: 5704)
+
+
+  ↳ app/controllers/properties_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (1.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNM1JuZDJ0MWJXUnFaSGsyYUd4cE5qUjFjV3RyYW14cGRtUnljd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SbFptRjFiSFJRY205d1pYSjBlUzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabUYxYkhSUWNtOXdaWEowZVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjI3MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bcff392bfc1d18f1489e0523b1222eaadf415db0/defaultProperty.png" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+Completed 302 Found in 61ms (ActiveRecord: 0.2ms | Allocations: 5405)
+
+
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"defaultProperty"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 182)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e01d70cb43199e64e9f80565d6c947062ccaabcf/montreal-rent-apartments.jpg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZakZ5YURkaWFUZDVaV2d6YWpadE9XRTBaRFV5WTNkc01YQTJZZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVh4cGJteHBibVU3SUdacGJHVnVZVzFsUFNKemFIVjBkR1Z5YzNSdlkydGZNVE0xTWpBMk9ETXhMVEV0WlRFMU5qVTRNVFUxTkRnNU5Ua3VhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkemFIVjBkR1Z5YzNSdlkydGZNVE0xTWpBMk9ETXhMVEV0WlRFMU5qVTRNVFUxTkRnNU5Ua3VhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDYtMDRUMTY6MjY6MjcuMjczWiIsInB1ciI6ImJsb2Jfa2V5In19--a64184e6c083eb602b7c3c088c1b55d6de5b1def/shutterstock_135206831-1-e1565815548959.jpg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e01d70cb43199e64e9f80565d6c947062ccaabcf", "filename"=>"montreal-rent-apartments"}
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+Processing by ActiveStorage::DiskController#show as JPEG
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: wy79n24y0gmanf0nrnevds8svscg (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkM2szT1c0eU5Ia3daMjFoYm1Zd2JuSnVaWFprY3poemRuTmpad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW0xdmJuUnlaV0ZzTFhKbGJuUXRZWEJoY25SdFpXNTBjeTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyMXZiblJ5WldGc0xYSmxiblF0WVhCaGNuUnRaVzUwY3k1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0wNi0wNFQxNjoyNjoyNy4zOThaIiwicHVyIjoiYmxvYl9rZXkifX0=--37de4671a0f0303f8cf94455d4a375a31f1246ce/montreal-rent-apartments.jpg)[0m
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkM2szT1c0eU5Ia3daMjFoYm1Zd2JuSnVaWFprY3poemRuTmpad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW0xdmJuUnlaV0ZzTFhKbGJuUXRZWEJoY25SdFpXNTBjeTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyMXZiblJ5WldGc0xYSmxiblF0WVhCaGNuUnRaVzUwY3k1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0wNi0wNFQxNjoyNjoyNy4zOThaIiwicHVyIjoiYmxvYl9rZXkifX0=--37de4671a0f0303f8cf94455d4a375a31f1246ce/montreal-rent-apartments.jpg
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+Completed 302 Found in 15ms (ActiveRecord: 0.8ms | Allocations: 2740)
+
+
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"shutterstock_135206831-1-e1565815548959"}
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 410)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkM2szT1c0eU5Ia3daMjFoYm1Zd2JuSnVaWFprY3poemRuTmpad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW0xdmJuUnlaV0ZzTFhKbGJuUXRZWEJoY25SdFpXNTBjeTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyMXZiblJ5WldGc0xYSmxiblF0WVhCaGNuUnRaVzUwY3k1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0wNi0wNFQxNjoyNjoyNy4zOThaIiwicHVyIjoiYmxvYl9rZXkifX0=--37de4671a0f0303f8cf94455d4a375a31f1246ce/montreal-rent-apartments.jpg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+Processing by ActiveStorage::DiskController#show as JPEG
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"montreal-rent-apartments"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 168)
+
+
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 7], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6d7c6bdaba81db83cc552a72fb991fc164601c45/b381ec2e7d6be964bd95ad996a707d09.jpeg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cc938e143f7e5efcc6e8c6855d3ee01cff0ea175/defaultProperty.png" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6d7c6bdaba81db83cc552a72fb991fc164601c45", "filename"=>"b381ec2e7d6be964bd95ad996a707d09"}
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cc938e143f7e5efcc6e8c6855d3ee01cff0ea175", "filename"=>"defaultProperty"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: bss66i93pahdbnntozk0330ex59m (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZbk56TmpacE9UTndZV2hrWW01dWRHOTZhekF6TXpCbGVEVTViUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpZFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Jek9ERmxZekpsTjJRMlltVTVOalJpWkRrMVlXUTVPVFpoTnpBM1pEQTVMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoySXpPREZsWXpKbE4yUTJZbVU1TmpSaVpEazFZV1E1T1RaaE56QTNaREE1TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0wNi0wNFQxNjoyNjoyNy41MTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--aa0e0264456a8be5964006f766c92501ff4aa28e/b381ec2e7d6be964bd95ad996a707d09.jpeg)[0m
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: j57it0c5ylwrj9kdxn3zqh94lvzu (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhalUzYVhRd1l6VjViSGR5YWpsclpIaHVNM3B4YURrMGJIWjZkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SbFptRjFiSFJRY205d1pYSjBlUzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabUYxYkhSUWNtOXdaWEowZVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjUxMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--268f594bbf3409fc55b58c71a4c01dfc41dd44dd/defaultProperty.png)[0m
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--983457111f2786dd0515a3147feadeea0eea7cad/200-16k-apartments.jpg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhalUzYVhRd1l6VjViSGR5YWpsclpIaHVNM3B4YURrMGJIWjZkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SbFptRjFiSFJRY205d1pYSjBlUzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabUYxYkhSUWNtOXdaWEowZVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjUxMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--268f594bbf3409fc55b58c71a4c01dfc41dd44dd/defaultProperty.png
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZbk56TmpacE9UTndZV2hrWW01dWRHOTZhekF6TXpCbGVEVTViUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpZFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Jek9ERmxZekpsTjJRMlltVTVOalJpWkRrMVlXUTVPVFpoTnpBM1pEQTVMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoySXpPREZsWXpKbE4yUTJZbVU1TmpSaVpEazFZV1E1T1RaaE56QTNaREE1TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0wNi0wNFQxNjoyNjoyNy41MTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--aa0e0264456a8be5964006f766c92501ff4aa28e/b381ec2e7d6be964bd95ad996a707d09.jpeg
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms | Allocations: 3000)
+
+
+Completed 302 Found in 17ms (ActiveRecord: 0.1ms | Allocations: 4870)
+
+
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 15], ["record_type", "Property"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:7:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+[active_model_serializers]   ↳ app/serializers/property_serializer.rb:8:in `image_url'
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--983457111f2786dd0515a3147feadeea0eea7cad", "filename"=>"200-16k-apartments"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (178.67ms)
+Completed 200 OK in 248ms (Views: 198.2ms | ActiveRecord: 10.3ms | Allocations: 54295)
+
+
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZbk56TmpacE9UTndZV2hrWW01dWRHOTZhekF6TXpCbGVEVTViUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpZFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Jek9ERmxZekpsTjJRMlltVTVOalJpWkRrMVlXUTVPVFpoTnpBM1pEQTVMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoySXpPREZsWXpKbE4yUTJZbVU1TmpSaVpEazFZV1E1T1RaaE56QTNaREE1TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0wNi0wNFQxNjoyNjoyNy41MTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--aa0e0264456a8be5964006f766c92501ff4aa28e/b381ec2e7d6be964bd95ad996a707d09.jpeg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: blmi1dspold1whoeg3v331obypdj (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZbXh0YVRGa2MzQnZiR1F4ZDJodlpXY3pkak16TVc5aWVYQmthZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01DMHhObXN0WVhCaGNuUnRaVzUwY3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25Kekl3TUMweE5tc3RZWEJoY25SdFpXNTBjeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjUzNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b03856ecfdc7f3f532764e8070ac9e3c0a9f3576/200-16k-apartments.jpg)[0m
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhalUzYVhRd1l6VjViSGR5YWpsclpIaHVNM3B4YURrMGJIWjZkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SbFptRjFiSFJRY205d1pYSjBlUzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabUYxYkhSUWNtOXdaWEowZVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjUxMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--268f594bbf3409fc55b58c71a4c01dfc41dd44dd/defaultProperty.png" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZbXh0YVRGa2MzQnZiR1F4ZDJodlpXY3pkak16TVc5aWVYQmthZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01DMHhObXN0WVhCaGNuUnRaVzUwY3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25Kekl3TUMweE5tc3RZWEJoY25SdFpXNTBjeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjUzNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b03856ecfdc7f3f532764e8070ac9e3c0a9f3576/200-16k-apartments.jpg
+Completed 302 Found in 8ms (ActiveRecord: 0.2ms | Allocations: 1882)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"b381ec2e7d6be964bd95ad996a707d09"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 167)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"defaultProperty"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 171)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZbXh0YVRGa2MzQnZiR1F4ZDJodlpXY3pkak16TVc5aWVYQmthZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01DMHhObXN0WVhCaGNuUnRaVzUwY3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25Kekl3TUMweE5tc3RZWEJoY25SdFpXNTBjeTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIxLTA2LTA0VDE2OjI2OjI3LjUzNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b03856ecfdc7f3f532764e8070ac9e3c0a9f3576/200-16k-apartments.jpg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"200-16k-apartments"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 167)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2008c87ba20c7389cc3daf0eb0d94b6e19b7fb91/analisse-taft-house-exterior-1587586144.jpg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2008c87ba20c7389cc3daf0eb0d94b6e19b7fb91", "filename"=>"analisse-taft-house-exterior-1587586144"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: ehndy325e3zxytoew7jj96gjm7bs (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaV2h1Wkhrek1qVmxNM3A0ZVhSdlpYYzNhbW81Tm1kcWJUZGljd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVh4cGJteHBibVU3SUdacGJHVnVZVzFsUFNKaGJtRnNhWE56WlMxMFlXWjBMV2h2ZFhObExXVjRkR1Z5YVc5eUxURTFPRGMxT0RZeE5EUXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkaGJtRnNhWE56WlMxMFlXWjBMV2h2ZFhObExXVjRkR1Z5YVc5eUxURTFPRGMxT0RZeE5EUXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDYtMDRUMTY6MjY6MjcuNzQyWiIsInB1ciI6ImJsb2Jfa2V5In19--78f45da04c0072a4cde9edec53417de2dde6d6a2/analisse-taft-house-exterior-1587586144.jpg)[0m
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaV2h1Wkhrek1qVmxNM3A0ZVhSdlpYYzNhbW81Tm1kcWJUZGljd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVh4cGJteHBibVU3SUdacGJHVnVZVzFsUFNKaGJtRnNhWE56WlMxMFlXWjBMV2h2ZFhObExXVjRkR1Z5YVc5eUxURTFPRGMxT0RZeE5EUXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkaGJtRnNhWE56WlMxMFlXWjBMV2h2ZFhObExXVjRkR1Z5YVc5eUxURTFPRGMxT0RZeE5EUXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDYtMDRUMTY6MjY6MjcuNzQyWiIsInB1ciI6ImJsb2Jfa2V5In19--78f45da04c0072a4cde9edec53417de2dde6d6a2/analisse-taft-house-exterior-1587586144.jpg
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 1128)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b0b187cd2f15cdec9b65acf9d407b43e58241410/DJI_0028-HDR.jpg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b0b187cd2f15cdec9b65acf9d407b43e58241410", "filename"=>"DJI_0028-HDR"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaV2h1Wkhrek1qVmxNM3A0ZVhSdlpYYzNhbW81Tm1kcWJUZGljd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVh4cGJteHBibVU3SUdacGJHVnVZVzFsUFNKaGJtRnNhWE56WlMxMFlXWjBMV2h2ZFhObExXVjRkR1Z5YVc5eUxURTFPRGMxT0RZeE5EUXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkaGJtRnNhWE56WlMxMFlXWjBMV2h2ZFhObExXVjRkR1Z5YVc5eUxURTFPRGMxT0RZeE5EUXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDYtMDRUMTY6MjY6MjcuNzQyWiIsInB1ciI6ImJsb2Jfa2V5In19--78f45da04c0072a4cde9edec53417de2dde6d6a2/analisse-taft-house-exterior-1587586144.jpg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: hkhcrnjbcp29c1njjylxkodfn66d (http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhR3RvWTNKdWFtSmpjREk1WXpGdWFtcDViSGhyYjJSbWJqWTJaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtSS1NWOHdNREk0TFVoRVVpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjBSS1NWOHdNREk0TFVoRVVpNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjEtMDYtMDRUMTY6MjY6MjcuNzUxWiIsInB1ciI6ImJsb2Jfa2V5In19--90dade22d6517b0e9f8f75617d934ad89d68f528/DJI_0028-HDR.jpg)[0m
+Redirected to http://127.0.0.1:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhR3RvWTNKdWFtSmpjREk1WXpGdWFtcDViSGhyYjJSbWJqWTJaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtSS1NWOHdNREk0TFVoRVVpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjBSS1NWOHdNREk0TFVoRVVpNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjEtMDYtMDRUMTY6MjY6MjcuNzUxWiIsInB1ciI6ImJsb2Jfa2V5In19--90dade22d6517b0e9f8f75617d934ad89d68f528/DJI_0028-HDR.jpg
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1277)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisse-taft-house-exterior-1587586144"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 167)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhR3RvWTNKdWFtSmpjREk1WXpGdWFtcDViSGhyYjJSbWJqWTJaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtSS1NWOHdNREk0TFVoRVVpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjBSS1NWOHdNREk0TFVoRVVpNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjEtMDYtMDRUMTY6MjY6MjcuNzUxWiIsInB1ciI6ImJsb2Jfa2V5In19--90dade22d6517b0e9f8f75617d934ad89d68f528/DJI_0028-HDR.jpg" for 127.0.0.1 at 2021-06-04 12:21:27 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"DJI_0028-HDR"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 169)
+
+

@@ -30,7 +30,6 @@ export const deleteProperty = ({id, password}) => {
         .then(data => {
             if (data.errors) {
                 dispatch({ type: 'FORM_ERRORS', formErrors: data.errors})
-                console.log('errors', data.errors)
             } else {
                 dispatch({ type: 'DELETE_PROPERTY', id})
             }
