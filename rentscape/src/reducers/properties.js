@@ -44,12 +44,6 @@ const properties = (state = { properties: [], sortedProperties: [], errors: [], 
                 loading: false
             }
 
-        case 'DELETING_PROPERTY':
-            return {
-                ...state,
-                loading: true
-            }
-        
         case 'DELETE_PROPERTY':
             return {
                 ...state,

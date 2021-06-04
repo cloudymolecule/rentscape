@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { deleteProperty } from '../actions/properties'
+import { deleteProperty, resetErrors } from '../actions/properties'
 
 class PropertyShow extends Component {
     
     state = {
         password: ''
     }
-    
+
     handleChange = e => {
         this.setState({
           password: e.target.value
@@ -16,6 +16,7 @@ class PropertyShow extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
+        this.props.resetErrors()
         const deleteObj = {
             id: this.props.id,
             password: this.state.password
@@ -23,8 +24,10 @@ class PropertyShow extends Component {
         this.props.deleteProperty(deleteObj)
         
         setTimeout(() => {
-            window.history.back()
-        }, 50)
+            if (this.props.errors.length === 0) {
+                window.history.back()
+            }
+        }, 300);
     }
 
     commaOrNot = () => {
@@ -67,4 +70,6 @@ class PropertyShow extends Component {
     }
 }
 
-export default connect(null, { deleteProperty })(PropertyShow)
+const mapStateToProps = state => ({ errors: state.properties.errors })
+
+export default connect(mapStateToProps, { deleteProperty, resetErrors })(PropertyShow)

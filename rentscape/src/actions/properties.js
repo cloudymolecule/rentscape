@@ -25,12 +25,12 @@ export const deleteProperty = ({id, password}) => {
             },
             body: JSON.stringify(pObj)
         }
-        dispatch({ type: 'DELETING_PROPERTY'})
         fetch(`http://localhost:4000/validate`, configObj)
         .then(res => res.json())
         .then(data => {
             if (data.errors) {
                 dispatch({ type: 'FORM_ERRORS', formErrors: data.errors})
+                console.log('errors', data.errors)
             } else {
                 dispatch({ type: 'DELETE_PROPERTY', id})
             }
