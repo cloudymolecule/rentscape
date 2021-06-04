@@ -3,7 +3,7 @@ import ReviewForm from '../components/PropertyForm'
 import Home from '../components/Home'
 import { connect } from 'react-redux'
 import Notifications from '../components/Notifications'
-import { resetErrors } from '../actions/resetErrors'
+import { resetErrors } from '../actions/properties'
 
 class NewProperty extends Component {
 

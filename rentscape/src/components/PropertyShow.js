@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { deleteProperty } from '../actions/deleteProperty'
+import { deleteProperty } from '../actions/properties'
 
 class PropertyShow extends Component {
     
@@ -21,7 +21,10 @@ class PropertyShow extends Component {
             password: this.state.password
         }
         this.props.deleteProperty(deleteObj)
-        window.history.back()
+        
+        setTimeout(() => {
+            window.history.back()
+        }, 50)
     }
 
     commaOrNot = () => {
@@ -65,6 +68,3 @@ class PropertyShow extends Component {
 }
 
 export default connect(null, { deleteProperty })(PropertyShow)
-
-
-// id={property.id}

@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import StatesList from '../constants/StatesList'
-import { postProperty } from '../actions/postProperty'
-import { resetErrors } from '../actions/resetErrors'
+import { postProperty, resetErrors } from '../actions/properties'
 
 class PropertyForm extends Component {
     

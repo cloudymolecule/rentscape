@@ -30,6 +30,7 @@ body {
   gap: 1%;
   grid-template-columns: 1fr 0.3fr;
   grid-template-rows: 1fr;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) , rgba(255, 255, 255, 0.9));
 }
 
 .menu-search-label {

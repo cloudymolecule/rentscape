@@ -3,7 +3,7 @@ import StatesList from '../constants/StatesList'
 import SortBy from './SortBy'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { updateSortedProperties } from '../actions/updateSortedProperties'
+import { updateSortedProperties } from '../actions/properties'
 
 class MenuSearch extends Component {
     

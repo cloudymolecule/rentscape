@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { updateSortedProperties } from '../actions/updateSortedProperties'
+import { updateSortedProperties } from '../actions/properties'
 
 class SortBy extends Component {
     

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Property from '../components/Property'
 import { connect } from 'react-redux'
-import { fetchProperties } from '../actions/fetchProperties'
+import { fetchProperties } from '../actions/properties'
 
 class Properties extends Component {
     

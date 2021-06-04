@@ -3,9 +3,7 @@ import { connect } from 'react-redux'
 import Home from './Home'
 import PropertyShow from './PropertyShow'
 import Notifications from './Notifications'
-import { resetErrors } from '../actions/resetErrors'
-import { fetchProperty } from '../actions/fetchProperty'
-
+import { resetErrors, fetchProperty } from '../actions/properties'
 
 class PropertyDisplay extends Component {
     
