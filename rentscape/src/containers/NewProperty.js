@@ -24,7 +24,7 @@ class NewProperty extends Component {
                 <div className='display'>
                     <ReviewForm />
                 </div>
-                <div className='footer'>FOOTER</div>
+                <div className='footer'>Copyright © 2021 Dario Carlino</div>
             </>
         )
     }

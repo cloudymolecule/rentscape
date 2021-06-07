@@ -11,7 +11,7 @@ const About = () => {
             <div className='notifications'></div>
             <div className='about'>
                 <h1>Rentscape</h1>
-                <h3>Rentscape allows you to review rental properties in an anonymous way. Rentscape allows you to share your rental experience with the world and help you and others make an informed decision before signing the lease agreement.</h3>
+                <h3>Rentscape allows you to review rental properties anonymously. Rentscape allows you to share your rental experience with the world and help you and others make an informed decision before signing the lease agreement.</h3>
                 <h2>Sorting Properties</h2>
                 <p>On the main page, on the top right corner you'll find the search menu, where you'll access filtering options to search for properties.</p>
                 <h2>Adding a property review</h2>
